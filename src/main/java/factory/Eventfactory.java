@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 import domain.Event;
 import java.time.LocalDate;
