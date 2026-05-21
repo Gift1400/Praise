@@ -1,5 +1,4 @@
-package Factory;
-
+import Factory.DonationFactory;
 import domain.Donation;
 import org.junit.jupiter.api.Test;
 

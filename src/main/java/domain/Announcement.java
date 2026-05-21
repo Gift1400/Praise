@@ -1,59 +1,91 @@
 package domain;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Announcement {
-    private Long id;
+
+    private String announcementId;
     private String title;
-    private String content;
+    private String message;
+    private LocalDate date;
+    private String churchSiteId;
     private AnnouncementType type;
-    private LocalDateTime createdAt;
 
-    public Announcement(Long id, String title, String content, AnnouncementType type, LocalDateTime createdAt) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.type = type;
-        this.createdAt = createdAt;
+    private Announcement(Builder builder) {
+        this.announcementId = builder.announcementId;
+        this.title = builder.title;
+        this.message = builder.message;
+        this.date = builder.date;
+        this.churchSiteId = builder.churchSiteId;
+        this.type = builder.type;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    // Getters
+    public String getAnnouncementId() {
+        return announcementId;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getMessage() {
+        return message;
     }
 
-    public String getContent() {
-        return content;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public String getChurchSiteId() {
+        return churchSiteId;
     }
 
     public AnnouncementType getType() {
         return type;
     }
 
-    public void setType(AnnouncementType type) {
-        this.type = type;
-    }
+    // Builder
+    public static class Builder {
+        private String announcementId;
+        private String title;
+        private String message;
+        private LocalDate date;
+        private String churchSiteId;
+        private AnnouncementType type;
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
+        public Builder setAnnouncementId(String announcementId) {
+            this.announcementId = announcementId;
+            return this;
+        }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+        public Builder setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+
+        public Builder setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+
+        public Builder setDate(LocalDate date) {
+            this.date = date;
+            return this;
+        }
+
+        public Builder setChurchSiteId(String churchSiteId) {
+            this.churchSiteId = churchSiteId;
+            return this;
+        }
+
+        public Builder setType(AnnouncementType type) {
+            this.type = type;
+            return this;
+        }
+
+        public Announcement build() {
+            return new Announcement(this);
+        }
     }
 }
