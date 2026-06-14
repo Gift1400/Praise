@@ -1,0 +1,1577 @@
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ /dev/null	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/Holy-Trinity.iml" filepath="$PROJECT_DIR$/Holy-Trinity.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: src/main/java/factory/DonationFactory.java
+===================================================================
+diff --git a/src/main/java/factory/DonationFactory.java b/src/main/java/factory/DonationFactory.java
+deleted file mode 100644
+--- a/src/main/java/factory/DonationFactory.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ /dev/null	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
+@@ -1,4 +0,0 @@
+-package factory;
+-
+-public class DonationFactory {
+-}
+Index: .gitignore
+===================================================================
+diff --git a/.gitignore b/.gitignore
+deleted file mode 100644
+--- a/.gitignore	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ /dev/null	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
+@@ -1,10 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Ignored default folder with query files
+-/queries/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+Index: src/main/java/repository/IMemberRepository.java
+===================================================================
+diff --git a/src/main/java/repository/IMemberRepository.java b/src/main/java/repository/IMemberRepository.java
+deleted file mode 100644
+--- a/src/main/java/repository/IMemberRepository.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ /dev/null	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
+@@ -1,10 +0,0 @@
+-package repository;
+-
+-import domain.Member;
+-
+-public interface MemberRepo {
+-    void create(Member member);
+-    Member read(String memberId);
+-    void update(Member member);
+-    void delete(String memberId);
+-}
+Index: src/main/java/repository/EventRepository.java
+===================================================================
+diff --git a/src/main/java/repository/EventRepository.java b/src/main/java/repository/EventRepository.java
+deleted file mode 100644
+--- a/src/main/java/repository/EventRepository.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ /dev/null	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
+@@ -1,6 +0,0 @@
+-package repository;
+-
+-import factory.Eventfactory;
+-
+-public class EventRepository {
+-}
+Index: src/main/java/repository/MemberRepositoryImp.java
+===================================================================
+diff --git a/src/main/java/repository/MemberRepositoryImp.java b/src/main/java/repository/MemberRepositoryImp.java
+deleted file mode 100644
+--- a/src/main/java/repository/MemberRepositoryImp.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ /dev/null	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
+@@ -1,4 +0,0 @@
+-package repository;
+-
+-public class MemberRepositoryImp {
+-}
+Index: pom.xml
+===================================================================
+diff --git a/pom.xml b/pom.xml
+deleted file mode 100644
+--- a/pom.xml	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ /dev/null	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
+@@ -1,44 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <groupId>za.ac.cput</groupId>
+-    <artifactId>Holy-Trinity</artifactId>
+-    <version>1.0-SNAPSHOT</version>
+-
+-    <properties>
+-        <maven.compiler.source>21</maven.compiler.source>
+-        <maven.compiler.target>21</maven.compiler.target>
+-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+-    </properties>
+-
+-    <dependencies>
+-        <!-- Source: https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+-        <dependency>
+-            <groupId>org.junit.jupiter</groupId>
+-            <artifactId>junit-jupiter-api</artifactId>
+-            <version>5.9.3</version>
+-            <scope>test</scope>
+-        </dependency>
+-
+-        <!-- Source: https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+-        <!-- Source: https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+-        <dependency>
+-            <groupId>org.junit.jupiter</groupId>
+-            <artifactId>junit-jupiter-engine</artifactId>
+-            <version>5.9.3</version>
+-            <scope>test</scope>
+-        </dependency>
+-
+-        <!-- Source: https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+-        <dependency>
+-            <groupId>commons-validator</groupId>
+-            <artifactId>commons-validator</artifactId>
+-            <version>1.6</version>
+-            <scope>compile</scope>
+-        </dependency>
+-    </dependencies>
+-
+-</project>
+Index: backend/src/main/java/service/memberService/IMemberService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/service/memberService/IMemberService.java b/backend/src/main/java/service/memberService/IMemberService.java
+new file mode 100644
+--- /dev/null	(date 1781465686334)
++++ b/backend/src/main/java/service/memberService/IMemberService.java	(date 1781465686334)
+@@ -0,0 +1,7 @@
++package service.memberService;
++
++import domain.Member;
++import service.IService;
++
++public interface IMemberService extends IService<Member, String> {
++}
+Index: backend/src/main/java/service/eventService/IEventService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/service/eventService/IEventService.java b/backend/src/main/java/service/eventService/IEventService.java
+new file mode 100644
+--- /dev/null	(date 1781465792016)
++++ b/backend/src/main/java/service/eventService/IEventService.java	(date 1781465792016)
+@@ -0,0 +1,4 @@
++package service.eventService;
++
++public interface IEventService {
++}
+Index: backend/src/main/java/service/donationService/DonationServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/service/donationService/DonationServiceImpl.java b/backend/src/main/java/service/donationService/DonationServiceImpl.java
+new file mode 100644
+--- /dev/null	(date 1781465806360)
++++ b/backend/src/main/java/service/donationService/DonationServiceImpl.java	(date 1781465806360)
+@@ -0,0 +1,4 @@
++package service.donationService;
++
++public class DonationServiceImpl {
++}
+Index: backend/src/main/java/service/eventService/EventServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/service/eventService/EventServiceImpl.java b/backend/src/main/java/service/eventService/EventServiceImpl.java
+new file mode 100644
+--- /dev/null	(date 1781465776609)
++++ b/backend/src/main/java/service/eventService/EventServiceImpl.java	(date 1781465776609)
+@@ -0,0 +1,4 @@
++package service.eventService;
++
++public class EventServiceImpl {
++}
+Index: backend/src/main/java/service/announcementsService/IAnnouncementService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/service/announcementsService/IAnnouncementService.java b/backend/src/main/java/service/announcementsService/IAnnouncementService.java
+new file mode 100644
+--- /dev/null	(date 1781465864481)
++++ b/backend/src/main/java/service/announcementsService/IAnnouncementService.java	(date 1781465864481)
+@@ -0,0 +1,4 @@
++package service.announcementsService;
++
++public interface IAnnouncementService {
++}
+Index: backend/src/main/java/repository/IEventRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/repository/IEventRepository.java b/backend/src/main/java/repository/IEventRepository.java
+new file mode 100644
+--- /dev/null	(date 1781465890900)
++++ b/backend/src/main/java/repository/IEventRepository.java	(date 1781465890900)
+@@ -0,0 +1,4 @@
++package repository;
++
++public interface IEventRepository {
++}
+Index: backend/src/main/java/service/donationService/IDonationService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/service/donationService/IDonationService.java b/backend/src/main/java/service/donationService/IDonationService.java
+new file mode 100644
+--- /dev/null	(date 1781465822041)
++++ b/backend/src/main/java/service/donationService/IDonationService.java	(date 1781465822041)
+@@ -0,0 +1,4 @@
++package service.donationService;
++
++public interface IDonationService {
++}
+Index: backend/src/main/java/service/announcementsService/AnnouncementServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/service/announcementsService/AnnouncementServiceImpl.java b/backend/src/main/java/service/announcementsService/AnnouncementServiceImpl.java
+new file mode 100644
+--- /dev/null	(date 1781465850886)
++++ b/backend/src/main/java/service/announcementsService/AnnouncementServiceImpl.java	(date 1781465850886)
+@@ -0,0 +1,4 @@
++package service.announcementsService;
++
++public class AnnouncementServiceImpl {
++}
+Index: backend/src/main/java/controller/MemberController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/controller/MemberController.java b/backend/src/main/java/controller/MemberController.java
+new file mode 100644
+--- /dev/null	(date 1781466065510)
++++ b/backend/src/main/java/controller/MemberController.java	(date 1781466065510)
+@@ -0,0 +1,4 @@
++package controller;
++
++public class MemberController {
++}
+Index: backend/src/main/java/repository/IDonationRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/repository/IDonationRepository.java b/backend/src/main/java/repository/IDonationRepository.java
+new file mode 100644
+--- /dev/null	(date 1781465912133)
++++ b/backend/src/main/java/repository/IDonationRepository.java	(date 1781465912133)
+@@ -0,0 +1,4 @@
++package repository;
++
++public interface IDonationRepository {
++}
+Index: backend/src/main/java/repository/IAnnouncementRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/repository/IAnnouncementRepository.java b/backend/src/main/java/repository/IAnnouncementRepository.java
+new file mode 100644
+--- /dev/null	(date 1781465935189)
++++ b/backend/src/main/java/repository/IAnnouncementRepository.java	(date 1781465935189)
+@@ -0,0 +1,4 @@
++package repository;
++
++public interface IAnnouncementRepository {
++}
+Index: backend/src/main/java/controller/DonationController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/controller/DonationController.java b/backend/src/main/java/controller/DonationController.java
+new file mode 100644
+--- /dev/null	(date 1781466132256)
++++ b/backend/src/main/java/controller/DonationController.java	(date 1781466132256)
+@@ -0,0 +1,4 @@
++package controller;
++
++public class DonationController {
++}
+Index: src/test/java/AnnouncementFactoryTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/AnnouncementFactoryTest.java b/backend/src/test/java/factoryTest/AnnouncementFactoryTest.java
+rename from src/test/java/AnnouncementFactoryTest.java
+rename to backend/src/test/java/factoryTest/AnnouncementFactoryTest.java
+--- a/src/test/java/AnnouncementFactoryTest.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/test/java/factoryTest/AnnouncementFactoryTest.java	(date 1781465983984)
+@@ -1,9 +1,9 @@
+-package java;
++package factoryTest;
+ 
+ import factory.AnnouncementFactory;
+ import org.junit.jupiter.api.Test;
+ import domain.Announcement;
+-import domain.AnnouncementType;
++import domain.Enums.AnnouncementType;
+ 
+ import static org.junit.jupiter.api.Assertions.*;
+ 
+Index: backend/src/main/java/controller/EventController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/controller/EventController.java b/backend/src/main/java/controller/EventController.java
+new file mode 100644
+--- /dev/null	(date 1781466092611)
++++ b/backend/src/main/java/controller/EventController.java	(date 1781466092611)
+@@ -0,0 +1,4 @@
++package controller;
++
++public class EventController {
++}
+Index: backend/src/main/java/controller/AnnouncementController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/controller/AnnouncementController.java b/backend/src/main/java/controller/AnnouncementController.java
+new file mode 100644
+--- /dev/null	(date 1781466107152)
++++ b/backend/src/main/java/controller/AnnouncementController.java	(date 1781466107152)
+@@ -0,0 +1,4 @@
++package controller;
++
++public class AnnouncementController {
++}
+Index: src/test/java/MemberFactoryTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/MemberFactoryTest.java b/backend/src/test/java/factoryTest/MemberFactoryTest.java
+rename from src/test/java/MemberFactoryTest.java
+rename to backend/src/test/java/factoryTest/MemberFactoryTest.java
+--- a/src/test/java/MemberFactoryTest.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/test/java/factoryTest/MemberFactoryTest.java	(date 1781453917583)
+@@ -1,3 +1,4 @@
++package factoryTest;
+ 
+ import domain.Member;
+ import factory.MemberFactory;
+Index: src/test/java/DonationFactoryTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/DonationFactoryTest.java b/backend/src/test/java/factoryTest/DonationFactoryTest.java
+rename from src/test/java/DonationFactoryTest.java
+rename to backend/src/test/java/factoryTest/DonationFactoryTest.java
+--- a/src/test/java/DonationFactoryTest.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/test/java/factoryTest/DonationFactoryTest.java	(date 1781453917599)
+@@ -1,4 +1,6 @@
+-import Factory.DonationFactory;
++package factoryTest;
++
++import factory.DonationFactory;
+ import domain.Donation;
+ import org.junit.jupiter.api.Test;
+ 
+Index: src/test/java/EventFactoryTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/EventFactoryTest.java b/backend/src/test/java/factoryTest/EventFactoryTest.java
+rename from src/test/java/EventFactoryTest.java
+rename to backend/src/test/java/factoryTest/EventFactoryTest.java
+--- a/src/test/java/EventFactoryTest.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/test/java/factoryTest/EventFactoryTest.java	(date 1781465983946)
+@@ -1,5 +1,7 @@
++package factoryTest;
++
+ import domain.Event;
+-import factory.Eventfactory;
++import factory.EventFactory;
+ import org.junit.jupiter.api.Test;
+ import java.time.LocalDate;
+ import static org.junit.jupiter.api.Assertions.*;
+@@ -10,7 +12,7 @@
+ 
+     @Test
+     public void testCreateEvent_ShouldReturnNotNull() {
+-        Event event = Eventfactory.createEvent(
++        Event event = EventFactory.createEvent(
+                 "E001", "Easter Celebration",
+                 "Annual Easter gathering for all members",
+                 eventDate, "10:00", "Main Hall", 300);
+@@ -19,7 +21,7 @@
+ 
+     @Test
+     public void testCreateEvent_ShouldHaveCorrectEventId() {
+-        Event event = Eventfactory.createEvent(
++        Event event = EventFactory.createEvent(
+                 "E001", "Easter Celebration",
+                 "Annual Easter gathering for all members",
+                 eventDate, "10:00", "Main Hall", 300);
+@@ -28,7 +30,7 @@
+ 
+     @Test
+     public void testCreateEvent_ShouldHaveCorrectTitle() {
+-        Event event = Eventfactory.createEvent(
++        Event event = EventFactory.createEvent(
+                 "E001", "Easter Celebration",
+                 "Annual Easter gathering for all members",
+                 eventDate, "10:00", "Main Hall", 300);
+@@ -37,7 +39,7 @@
+ 
+     @Test
+     public void testCreateEvent_ShouldHaveCorrectDescription() {
+-        Event event = Eventfactory.createEvent(
++        Event event = EventFactory.createEvent(
+                 "E001", "Easter Celebration",
+                 "Annual Easter gathering for all members",
+                 eventDate, "10:00", "Main Hall", 300);
+@@ -46,7 +48,7 @@
+ 
+     @Test
+     public void testCreateEvent_ShouldHaveCorrectDate() {
+-        Event event = Eventfactory.createEvent(
++        Event event = EventFactory.createEvent(
+                 "E001", "Easter Celebration",
+                 "Annual Easter gathering for all members",
+                 eventDate, "10:00", "Main Hall", 300);
+@@ -55,7 +57,7 @@
+ 
+     @Test
+     public void testCreateEvent_ShouldHaveCorrectLocation() {
+-        Event event = Eventfactory.createEvent(
++        Event event = EventFactory.createEvent(
+                 "E001", "Easter Celebration",
+                 "Annual Easter gathering for all members",
+                 eventDate, "10:00", "Main Hall", 300);
+@@ -64,7 +66,7 @@
+ 
+     @Test
+     public void testCreateEvent_ShouldHaveCorrectExpectedAttendees() {
+-        Event event = Eventfactory.createEvent(
++        Event event = EventFactory.createEvent(
+                 "E001", "Easter Celebration",
+                 "Annual Easter gathering for all members",
+                 eventDate, "10:00", "Main Hall", 300);
+Index: src/main/java/domain/Donation.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/domain/Donation.java b/backend/src/main/java/domain/Donation.java
+rename from src/main/java/domain/Donation.java
+rename to backend/src/main/java/domain/Donation.java
+--- a/src/main/java/domain/Donation.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/main/java/domain/Donation.java	(date 1781464322752)
+@@ -1,13 +1,16 @@
+ package domain;
+ 
+ 
++import jakarta.persistence.Entity;
++import jakarta.persistence.Id;
++
+ import java.time.LocalDate;
+ import java.util.Objects;
+ 
+-
++@Entity
+ public class Donation {
+ 
+-
++    @Id
+     private int donation_id;
+ 
+     private double amount;
+Index: src/main/java/domain/Event.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/domain/Event.java b/backend/src/main/java/domain/Event.java
+rename from src/main/java/domain/Event.java
+rename to backend/src/main/java/domain/Event.java
+--- a/src/main/java/domain/Event.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/main/java/domain/Event.java	(date 1781464981023)
+@@ -1,16 +1,23 @@
+ package domain;
+ 
++import jakarta.persistence.Entity;
++import jakarta.persistence.Id;
++
+ import java.time.LocalDate;
+ 
++@Entity
+ public class Event {
+ 
+-    private final String eventId;
+-    private final String title;
+-    private final String description;
+-    private final LocalDate date;
+-    private final String time;
+-    private final String location;
+-    private final int expectedAttendees;
++    @Id
++    private String eventId;
++    private String title;
++    private String description;
++    private LocalDate date;
++    private String time;
++    private String location;
++    private int expectedAttendees;
++
++    public Event(){}
+ 
+     private Event(Builder builder) {
+         this.eventId           = builder.eventId;
+Index: src/main/java/domain/Announcement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/domain/Announcement.java b/backend/src/main/java/domain/Announcement.java
+rename from src/main/java/domain/Announcement.java
+rename to backend/src/main/java/domain/Announcement.java
+--- a/src/main/java/domain/Announcement.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/main/java/domain/Announcement.java	(date 1781465983956)
+@@ -1,9 +1,15 @@
+ package domain;
+ 
++import domain.Enums.AnnouncementType;
++import jakarta.persistence.Entity;
++import jakarta.persistence.Id;
++
+ import java.time.LocalDate;
+ 
++@Entity
+ public class Announcement {
+ 
++    @Id
+     private String announcementId;
+     private String title;
+     private String message;
+@@ -11,6 +17,8 @@
+     private String churchSiteId;
+     private AnnouncementType type;
+ 
++    public Announcement(){}
++
+     private Announcement(Builder builder) {
+         this.announcementId = builder.announcementId;
+         this.title = builder.title;
+Index: src/main/java/domain/AnnouncementType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/domain/AnnouncementType.java b/backend/src/main/java/domain/Enums/AnnouncementType.java
+rename from src/main/java/domain/AnnouncementType.java
+rename to backend/src/main/java/domain/Enums/AnnouncementType.java
+--- a/src/main/java/domain/AnnouncementType.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/main/java/domain/Enums/AnnouncementType.java	(date 1781465983975)
+@@ -1,4 +1,4 @@
+-package domain;
++package domain.Enums;
+ 
+ public enum AnnouncementType {
+ 
+Index: backend/src/main/java/factory/DonationFactory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/factory/DonationFactory.java b/backend/src/main/java/factory/DonationFactory.java
+new file mode 100644
+--- /dev/null	(date 1779393417596)
++++ b/backend/src/main/java/factory/DonationFactory.java	(date 1779393417596)
+@@ -0,0 +1,37 @@
++package factory;
++
++import domain.Donation;
++
++import java.time.LocalDate;
++
++public class DonationFactory {
++
++    public static Donation createDonation(
++            int donation_id,
++            double amount,
++            LocalDate donation_date,
++            String donation_type,
++            String donor_name,
++            String recipient_organization
++    ) {
++
++        if (donation_id <= 0 ||
++                amount <= 0 ||
++                donation_date == null ||
++                donation_type == null || donation_type.isEmpty() ||
++                donor_name == null || donor_name.isEmpty() ||
++                recipient_organization == null || recipient_organization.isEmpty()) {
++
++            return null;
++        }
++
++        return new Donation.Builder()
++                .setDonation_id(donation_id)
++                .setAmount(amount)
++                .setDonation_date(donation_date)
++                .setDonation_type(donation_type)
++                .setDonor_name(donor_name)
++                .setRecipient_organization(recipient_organization)
++                .build();
++    }
++}
+Index: src/main/java/factory/Eventfactory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/factory/Eventfactory.java b/backend/src/main/java/factory/EventFactory.java
+rename from src/main/java/factory/Eventfactory.java
+rename to backend/src/main/java/factory/EventFactory.java
+--- a/src/main/java/factory/Eventfactory.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/main/java/factory/EventFactory.java	(date 1781465983935)
+@@ -3,7 +3,7 @@
+ import domain.Event;
+ import java.time.LocalDate;
+ 
+-public class Eventfactory {
++public class EventFactory {
+ 
+     public static Event createEvent(String eventId,
+                                     String title,
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"Holy-Trinity\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/.idea/compiler.xml	(date 1781454453126)
+@@ -10,4 +10,9 @@
+       </profile>
+     </annotationProcessing>
+   </component>
++  <component name="JavacSettings">
++    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
++      <module name="Holy-Trinity" options="-parameters" />
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/domain/Member.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/domain/Member.java b/backend/src/main/java/domain/Member.java
+rename from src/main/java/domain/Member.java
+rename to backend/src/main/java/domain/Member.java
+--- a/src/main/java/domain/Member.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/main/java/domain/Member.java	(date 1781464981034)
+@@ -1,12 +1,17 @@
+ package domain;
+ 
++import jakarta.persistence.Entity;
++import jakarta.persistence.Id;
++
++@Entity
+ public class Member {
++    @Id
+     private String memberId;
+     private String userName;
+     private String email;
+     private String contactNumber;
+ 
+-    private Member(){}
++    protected Member(){}
+ 
+     public Member(Builder builder){
+         this.memberId = builder.memberId;
+Index: src/main/java/factory/AnnouncementFactory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/factory/AnnouncementFactory.java b/backend/src/main/java/factory/AnnouncementFactory.java
+rename from src/main/java/factory/AnnouncementFactory.java
+rename to backend/src/main/java/factory/AnnouncementFactory.java
+--- a/src/main/java/factory/AnnouncementFactory.java	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/backend/src/main/java/factory/AnnouncementFactory.java	(date 1781465983992)
+@@ -1,7 +1,7 @@
+-package za.ac.cput.factory;
++package factory;
+ 
+-import za.ac.cput.domain.Announcement;
+-import za.ac.cput.domain.AnnouncementType;
++import domain.Announcement;
++import domain.Enums.AnnouncementType;
+ 
+ import java.time.LocalDate;
+ import java.util.UUID;
+Index: backend/src/main/java/PraiseApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/PraiseApplication.java b/backend/src/main/java/PraiseApplication.java
+new file mode 100644
+--- /dev/null	(date 1781454561939)
++++ b/backend/src/main/java/PraiseApplication.java	(date 1781454561939)
+@@ -0,0 +1,9 @@
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;
++
++@SpringBootApplication
++public class PraiseApplication {
++    public static void main(String[] args) {
++        SpringApplication.run(PraiseApplication.class, args);
++    }
++}
+Index: backend/src/main/java/repository/IMemberRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/repository/IMemberRepository.java b/backend/src/main/java/repository/IMemberRepository.java
+new file mode 100644
+--- /dev/null	(date 1781465563647)
++++ b/backend/src/main/java/repository/IMemberRepository.java	(date 1781465563647)
+@@ -0,0 +1,7 @@
++package repository;
++
++import domain.Member;
++import org.springframework.data.jpa.repository.JpaRepository;
++
++public interface IMemberRepository extends JpaRepository<Member, String> {
++}
+Index: backend/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/.idea/workspace.xml b/backend/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1781453615149)
++++ b/backend/.idea/workspace.xml	(date 1781453615149)
+@@ -0,0 +1,113 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="17902c5b-61d6-4175-8be0-62f5ef86b250" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Holy-Trinity.iml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/domain/Announcement.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/domain/AnnouncementType.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/domain/Donation.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/domain/Event.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/domain/Member.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/factory/AnnouncementFactory.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/factory/DonationFactory.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/factory/Eventfactory.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/factory/MemberFactory.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/repository/EventRepository.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/repository/IMemberRepository.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/repository/MemberRepositoryImp.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/main/java/util/Helper.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/test/java/AnnouncementFactoryTest.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/test/java/DonationFactoryTest.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/test/java/EventFactoryTest.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/../src/test/java/MemberFactoryTest.java" beforeDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++  </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;Gift1400&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/Gift1400/Praise.git&quot;,
++    &quot;accountId&quot;: &quot;4c2fa956-c1c4-44ad-a87f-151093774247&quot;
++  }
++}</component>
++  <component name="McpProjectServerCommands">
++    <commands />
++    <urls />
++  </component>
++  <component name="ProjectColorInfo">{
++  &quot;customColor&quot;: &quot;&quot;,
++  &quot;associatedIndex&quot;: 2
++}</component>
++  <component name="ProjectId" id="3F8OSn96x7bTIu57fKYks1e46CW" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
++    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Praise/backend/pom.xml&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  }
++}</component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
++        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="17902c5b-61d6-4175-8be0-62f5ef86b250" name="Changes" comment="" />
++      <created>1781453232227</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1781453232227</updated>
++      <workItem from="1781453233443" duration="327000" />
++      <workItem from="1781453577713" duration="38000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++</project>
+\ No newline at end of file
+Index: backend/src/main/java/service/memberService/MemberServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/service/memberService/MemberServiceImpl.java b/backend/src/main/java/service/memberService/MemberServiceImpl.java
+new file mode 100644
+--- /dev/null	(date 1781465983966)
++++ b/backend/src/main/java/service/memberService/MemberServiceImpl.java	(date 1781465983966)
+@@ -0,0 +1,30 @@
++package service.memberService;
++
++import domain.Member;
++
++import java.util.*;
++
++public class MemberServiceImpl implements IMemberService {
++
++
++
++    @Override
++    public Member create(Member member) {
++        return null;
++    }
++
++    @Override
++    public Member read(String s) {
++        return null;
++    }
++
++    @Override
++    public Member update(Member member) {
++        return null;
++    }
++
++    @Override
++    public boolean delete(String s) {
++        return false;
++    }
++}
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\">\r\n    <file url=\"file://$PROJECT_DIR$/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/resources\" charset=\"UTF-8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+--- a/.idea/encodings.xml	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/.idea/encodings.xml	(date 1781453005866)
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="Encoding">
+-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/backend/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/backend/src/main/resources" charset="UTF-8" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: backend/.idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/.idea/compiler.xml b/backend/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1781453237365)
++++ b/backend/.idea/compiler.xml	(date 1781453237365)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="Holy-Trinity" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: backend/.idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/.idea/encodings.xml b/backend/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1781453237365)
++++ b/backend/.idea/encodings.xml	(date 1781453237365)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: backend/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/.idea/misc.xml b/backend/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1781453237365)
++++ b/backend/.idea/misc.xml	(date 1781453237365)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="24" project-jdk-type="JavaSDK" />
++</project>
+\ No newline at end of file
+Index: backend/.idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/.idea/jarRepositories.xml b/backend/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1781453237381)
++++ b/backend/.idea/jarRepositories.xml	(date 1781453237381)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: backend/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/.idea/vcs.xml b/backend/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1781453237381)
++++ b/backend/.idea/vcs.xml	(date 1781453237381)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: backend/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/pom.xml b/backend/pom.xml
+new file mode 100644
+--- /dev/null	(date 1781462010402)
++++ b/backend/pom.xml	(date 1781462010402)
+@@ -0,0 +1,64 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <parent>
++        <groupId>org.springframework.boot</groupId>
++        <artifactId>spring-boot-starter-parent</artifactId>
++        <version>3.2.5</version>
++    </parent>
++
++    <groupId>za.ac.cput</groupId>
++    <artifactId>Holy-Trinity</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <properties>
++        <java.version>21</java.version>
++    </properties>
++
++    <dependencies>
++        <!-- REST API -->
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-web</artifactId>
++        </dependency>
++
++        <!-- Database (JPA) -->
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-data-jpa</artifactId>
++        </dependency>
++
++        <!-- Security/Login -->
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-security</artifactId>
++        </dependency>
++
++        <!-- MySQL Driver -->
++        <dependency>
++            <groupId>com.mysql</groupId>
++            <artifactId>mysql-connector-j</artifactId>
++            <scope>9.2.0</scope>
++        </dependency>
++
++        <!-- Testing -->
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-test</artifactId>
++            <scope>test</scope>
++        </dependency>
++    </dependencies>
++
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.springframework.boot</groupId>
++                <artifactId>spring-boot-maven-plugin</artifactId>
++            </plugin>
++        </plugins>
++    </build>
++
++</project>
+\ No newline at end of file
+Index: backend/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/backend/src/main/resources/application.properties b/backend/src/main/resources/application.properties
+new file mode 100644
+--- /dev/null	(date 1781464800852)
++++ b/backend/src/main/resources/application.properties	(date 1781464800852)
+@@ -0,0 +1,15 @@
++spring.application.name=Praise
++
++# MySQL Database
++spring.datasource.url=jdbc:mysql://localhost:3306/praise_db?createDatabaseIfNotExist=true
++spring.datasource.username=root
++spring.datasource.password=password
++spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
++
++# JPA
++spring.jpa.hibernate.ddl-auto=update
++spring.jpa.show-sql=true
++spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
++
++# Server port
++server.port=8080
+\ No newline at end of file
+Index: backend/src/main/java/service/IService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/src/main/java/service/IService.java b/backend/src/main/java/service/IService.java
+new file mode 100644
+--- /dev/null	(date 1781464839748)
++++ b/backend/src/main/java/service/IService.java	(date 1781464839748)
+@@ -0,0 +1,11 @@
++package service;
++
++public interface IService <T, ID> {
++    T create(T t);
++
++    T read(ID id);
++
++    T update(T t);
++
++    boolean delete(ID id);
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_22\" default=\"true\" project-jdk-name=\"22\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 2f55e4556ee90ac290143f38cf2c9c5da782202b)
++++ b/.idea/misc.xml	(date 1781453005837)
+@@ -5,8 +5,9 @@
+     <option name="originalFiles">
+       <list>
+         <option value="$PROJECT_DIR$/pom.xml" />
++        <option value="$PROJECT_DIR$/backend/pom.xml" />
+       </list>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="22" project-jdk-type="JavaSDK" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="22" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1781465984257)
++++ b/.idea/workspace.xml	(date 1781465984257)
+@@ -0,0 +1,345 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="bf786edf-1f75-4fb5-ad5b-9de0fa5b9fbe" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/.idea/compiler.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/.idea/encodings.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/.idea/jarRepositories.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/PraiseApplication.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/factory/DonationFactory.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IAnnouncementRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IDonationRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IEventRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IMemberRepository.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/IService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/announcementsService/AnnouncementServiceImpl.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/announcementsService/IAnnouncementService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/donationService/DonationServiceImpl.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/donationService/IDonationService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/eventService/EventServiceImpl.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/eventService/IEventService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/memberService/IMemberService.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/memberService/MemberServiceImpl.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Announcement$Builder.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Announcement.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/AnnouncementType.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Donation$Builder.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Donation.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Event$Builder.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Event.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Member$Builder.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Member.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/factory/AnnouncementFactory.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/factory/DonationFactory.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/factory/Eventfactory.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/factory/MemberFactory.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/repository/EventRepository.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/repository/IMemberRepository.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/repository/MemberRepositoryImp.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/classes/util/Helper.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/test-classes/DonationFactoryTest.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/test-classes/EventFactoryTest.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/test-classes/MemberFactoryTest.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/backend/target/test-classes/java/AnnouncementFactoryTest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/Holy-Trinity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Holy-Trinity.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Announcement.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/domain/AnnouncementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Enums/AnnouncementType.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Donation.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Event.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Member.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/factory/AnnouncementFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/factory/AnnouncementFactory.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/factory/DonationFactory.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/factory/Eventfactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/factory/EventFactory.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/factory/MemberFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/factory/MemberFactory.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/repository/EventRepository.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/repository/IMemberRepository.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/repository/MemberRepositoryImp.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/util/Helper.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/AnnouncementFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/factoryTest/AnnouncementFactoryTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/DonationFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/factoryTest/DonationFactoryTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/EventFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/factoryTest/EventFactoryTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/MemberFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/factoryTest/MemberFactoryTest.java" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="JUnit5 Test Class" />
++        <option value="Class" />
++        <option value="Interface" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <excluded-from-favorite>
++      <branch-storage>
++        <map>
++          <entry type="REMOTE">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
++              </list>
++            </value>
++          </entry>
++        </map>
++      </branch-storage>
++    </excluded-from-favorite>
++    <favorite-branches>
++      <branch-storage>
++        <map>
++          <entry type="REMOTE">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$" source="origin/230064728" />
++              </list>
++            </value>
++          </entry>
++        </map>
++      </branch-storage>
++    </favorite-branches>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;Gift1400&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/Gift1400/Praise.git&quot;,
++    &quot;accountId&quot;: &quot;4c2fa956-c1c4-44ad-a87f-151093774247&quot;
++  }
++}</component>
++  <component name="McpProjectServerCommands">
++    <commands />
++    <urls />
++  </component>
++  <component name="ProblemsViewState">
++    <option name="selectedTabId" value="CurrentFile" />
++  </component>
++  <component name="ProjectColorInfo">{
++  &quot;customColor&quot;: &quot;&quot;,
++  &quot;associatedIndex&quot;: 2
++}</component>
++  <component name="ProjectId" id="3BcGSxEOV9tjnaHaKFliK88FIiY" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "JUnit.MemberFactoryTest.createMember (1).executor": "Run",
++    "JUnit.MemberFactoryTest.executor": "Debug",
++    "JUnit.MemberFactoryTest.memberIdNull.executor": "Run",
++    "JUnit.MemberFactoryTest.memberIdTest.executor": "Run",
++    "JUnit.MemberFactoryTest.memberUserNameTest.executor": "Run",
++    "JUnit.MemberFactoryTest.nullMemberIdTest.executor": "Run",
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "RunOnceActivity.MCP Project settings loaded": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
++    "git-widget-placeholder": "230221432",
++    "junie.onboarding.icon.badge.shown": "true",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/User/IdeaProjects/Praise",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "to.speed.mode.migration.done": "true",
++    "vue.rearranger.settings.migration": "true"
++  }
++}]]></component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\User\IdeaProjects\Praise\src" />
++      <recent name="C:\Users\User\IdeaProjects\Praise" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\User\IdeaProjects\Praise\backend" />
++      <recent name="C:\Users\User\IdeaProjects\Praise\src\main\java\domain" />
++      <recent name="C:\Users\User\IdeaProjects\Praise\src\test\java" />
++      <recent name="C:\Users\User\IdeaProjects\Praise\src\main\java\factory" />
++      <recent name="C:\Users\User\IdeaProjects\Praise\src\test" />
++    </key>
++    <key name="CreateTestDialog.Recents.Supers">
++      <recent name="" />
++    </key>
++    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
++      <recent name="" />
++    </key>
++    <key name="CreateTestDialog.RecentsKey">
++      <recent name="factory" />
++    </key>
++  </component>
++  <component name="RunManager" selected="JUnit.MemberFactoryTest">
++    <configuration name="MemberFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="Holy-Trinity" />
++      <option name="PACKAGE_NAME" value="factoryTest" />
++      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
++      <option name="TEST_OBJECT" value="class" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="MemberFactoryTest.memberIdNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="Holy-Trinity" />
++      <option name="PACKAGE_NAME" value="factoryTest" />
++      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
++      <option name="METHOD_NAME" value="memberIdNull" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="MemberFactoryTest.memberIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="Holy-Trinity" />
++      <option name="PACKAGE_NAME" value="factoryTest" />
++      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
++      <option name="METHOD_NAME" value="memberIdTest" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="MemberFactoryTest.memberUserNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="Holy-Trinity" />
++      <option name="PACKAGE_NAME" value="factoryTest" />
++      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
++      <option name="METHOD_NAME" value="memberUserNameTest" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="MemberFactoryTest.nullMemberIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="Holy-Trinity" />
++      <option name="PACKAGE_NAME" value="factoryTest" />
++      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
++      <option name="METHOD_NAME" value="nullMemberIdTest" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="JetRunConfigurationType">
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
++      <option name="filePath" />
++      <method v="2" />
++    </configuration>
++    <configuration name="PraiseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
++      <module name="Holy-Trinity" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="PraiseApplication" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="JUnit.MemberFactoryTest" />
++        <item itemvalue="JUnit.MemberFactoryTest.memberIdNull" />
++        <item itemvalue="JUnit.MemberFactoryTest.nullMemberIdTest" />
++        <item itemvalue="JUnit.MemberFactoryTest.memberIdTest" />
++        <item itemvalue="JUnit.MemberFactoryTest.memberUserNameTest" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
++        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="bf786edf-1f75-4fb5-ad5b-9de0fa5b9fbe" name="Changes" comment="" />
++      <created>1774780949542</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1774780949542</updated>
++      <workItem from="1774780951133" duration="4600000" />
++      <workItem from="1774785959704" duration="5881000" />
++      <workItem from="1774797950328" duration="5447000" />
++      <workItem from="1774859985325" duration="6678000" />
++      <workItem from="1775832981405" duration="619000" />
++      <workItem from="1776346928613" duration="1788000" />
++      <workItem from="1776525548050" duration="4075000" />
++      <workItem from="1776884619924" duration="892000" />
++      <workItem from="1780910006360" duration="1369000" />
++      <workItem from="1781448685341" duration="1461000" />
++      <workItem from="1781452629889" duration="453000" />
++      <workItem from="1781453181502" duration="49000" />
++      <workItem from="1781453617657" duration="2656000" />
++      <workItem from="1781459376920" duration="4596000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="origin/230221432" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/src/main/java/util/Helper.java b/backend/src/main/java/util/Helper.java
+rename from src/main/java/util/Helper.java
+rename to backend/src/main/java/util/Helper.java
+diff --git a/src/main/java/factory/MemberFactory.java b/backend/src/main/java/factory/MemberFactory.java
+rename from src/main/java/factory/MemberFactory.java
+rename to backend/src/main/java/factory/MemberFactory.java
+diff --git a/.idea/.gitignore b/backend/.gitignore
+rename from .idea/.gitignore
+rename to backend/.gitignore
+diff --git a/Holy-Trinity.iml b/backend/Holy-Trinity.iml
+rename from Holy-Trinity.iml
+rename to backend/Holy-Trinity.iml

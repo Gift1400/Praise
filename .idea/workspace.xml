@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bf786edf-1f75-4fb5-ad5b-9de0fa5b9fbe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/PraiseApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/controller/AnnouncementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/controller/DonationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/controller/EventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/factory/DonationFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IAnnouncementRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IDonationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IEventRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IMemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/IService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/announcementsService/AnnouncementServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/announcementsService/IAnnouncementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/donationService/DonationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/donationService/IDonationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/eventService/EventServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/eventService/IEventService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/memberService/IMemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/memberService/MemberServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Announcement$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Announcement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/AnnouncementType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Donation$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Donation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Event$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Event.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Member$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/domain/Member.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/factory/AnnouncementFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/factory/DonationFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/factory/Eventfactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/factory/MemberFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/repository/EventRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/repository/IMemberRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/repository/MemberRepositoryImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/classes/util/Helper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/test-classes/DonationFactoryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/test-classes/EventFactoryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/test-classes/MemberFactoryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/target/test-classes/java/AnnouncementFactoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Holy-Trinity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Holy-Trinity.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/DonationFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Announcement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/AnnouncementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Enums/AnnouncementType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Donation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/AnnouncementFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/factory/AnnouncementFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/Eventfactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/factory/EventFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factory/MemberFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/factory/MemberFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/EventRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/IMemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/MemberRepositoryImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/util/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AnnouncementFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/factoryTest/AnnouncementFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DonationFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/factoryTest/DonationFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EventFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/factoryTest/EventFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MemberFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/factoryTest/MemberFactoryTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/230064728" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="230221432" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Gift1400&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Gift1400/Praise.git&quot;,
+    &quot;accountId&quot;: &quot;4c2fa956-c1c4-44ad-a87f-151093774247&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3BcGSxEOV9tjnaHaKFliK88FIiY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.MemberFactoryTest.createMember (1).executor": "Run",
+    "JUnit.MemberFactoryTest.executor": "Debug",
+    "JUnit.MemberFactoryTest.memberIdNull.executor": "Run",
+    "JUnit.MemberFactoryTest.memberIdTest.executor": "Run",
+    "JUnit.MemberFactoryTest.memberUserNameTest.executor": "Run",
+    "JUnit.MemberFactoryTest.nullMemberIdTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Praise",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Praise\src" />
+      <recent name="C:\Users\User\IdeaProjects\Praise" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Praise\backend" />
+      <recent name="C:\Users\User\IdeaProjects\Praise\src\main\java\domain" />
+      <recent name="C:\Users\User\IdeaProjects\Praise\src\test\java" />
+      <recent name="C:\Users\User\IdeaProjects\Praise\src\main\java\factory" />
+      <recent name="C:\Users\User\IdeaProjects\Praise\src\test" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="factory" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MemberFactoryTest">
+    <configuration name="MemberFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Holy-Trinity" />
+      <option name="PACKAGE_NAME" value="factoryTest" />
+      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberFactoryTest.memberIdNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Holy-Trinity" />
+      <option name="PACKAGE_NAME" value="factoryTest" />
+      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
+      <option name="METHOD_NAME" value="memberIdNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberFactoryTest.memberIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Holy-Trinity" />
+      <option name="PACKAGE_NAME" value="factoryTest" />
+      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
+      <option name="METHOD_NAME" value="memberIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberFactoryTest.memberUserNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Holy-Trinity" />
+      <option name="PACKAGE_NAME" value="factoryTest" />
+      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
+      <option name="METHOD_NAME" value="memberUserNameTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberFactoryTest.nullMemberIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Holy-Trinity" />
+      <option name="PACKAGE_NAME" value="factoryTest" />
+      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
+      <option name="METHOD_NAME" value="nullMemberIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PraiseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Holy-Trinity" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="PraiseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MemberFactoryTest" />
+        <item itemvalue="JUnit.MemberFactoryTest.memberIdNull" />
+        <item itemvalue="JUnit.MemberFactoryTest.nullMemberIdTest" />
+        <item itemvalue="JUnit.MemberFactoryTest.memberIdTest" />
+        <item itemvalue="JUnit.MemberFactoryTest.memberUserNameTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf786edf-1f75-4fb5-ad5b-9de0fa5b9fbe" name="Changes" comment="" />
+      <created>1774780949542</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774780949542</updated>
+      <workItem from="1774780951133" duration="4600000" />
+      <workItem from="1774785959704" duration="5881000" />
+      <workItem from="1774797950328" duration="5447000" />
+      <workItem from="1774859985325" duration="6678000" />
+      <workItem from="1775832981405" duration="619000" />
+      <workItem from="1776346928613" duration="1788000" />
+      <workItem from="1776525548050" duration="4075000" />
+      <workItem from="1776884619924" duration="892000" />
+      <workItem from="1780910006360" duration="1369000" />
+      <workItem from="1781448685341" duration="1461000" />
+      <workItem from="1781452629889" duration="453000" />
+      <workItem from="1781453181502" duration="49000" />
+      <workItem from="1781453617657" duration="2656000" />
+      <workItem from="1781459376920" duration="5070000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/230221432" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
