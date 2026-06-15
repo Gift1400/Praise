@@ -1,12 +1,15 @@
 package domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+
+import jakarta.persistence.*;
+
 
 @Entity
+@Table(name = "members")
 public class Member {
     @Id
     private String memberId;
+
     private String userName;
     private String email;
     private String contactNumber;

@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf786edf-1f75-4fb5-ad5b-9de0fa5b9fbe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Announcement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Donation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IAnnouncementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IAnnouncementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IDonationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IDonationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IEventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IEventRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
