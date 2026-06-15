@@ -1,13 +1,12 @@
 package domain;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
+import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
+@Table(name = "donatons")
 public class Donation {
 
     @Id

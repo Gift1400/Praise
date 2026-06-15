@@ -1,23 +1,25 @@
 package domain;
 
 import domain.Enums.AnnouncementType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "announcements")
 public class Announcement {
 
     @Id
     private String announcementId;
+
     private String title;
     private String message;
     private LocalDate date;
     private String churchSiteId;
     private AnnouncementType type;
 
-    public Announcement(){}
+    protected Announcement(){}
 
     private Announcement(Builder builder) {
         this.announcementId = builder.announcementId;

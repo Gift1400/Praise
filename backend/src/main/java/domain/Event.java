@@ -1,15 +1,18 @@
 package domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "events")
 public class Event {
 
     @Id
     private String eventId;
+
+    @Embedded
     private String title;
     private String description;
     private LocalDate date;
@@ -17,7 +20,7 @@ public class Event {
     private String location;
     private int expectedAttendees;
 
-    public Event(){}
+    protected Event(){}
 
     private Event(Builder builder) {
         this.eventId           = builder.eventId;
