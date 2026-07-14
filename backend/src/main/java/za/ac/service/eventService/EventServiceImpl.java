@@ -1,29 +1,20 @@
-package za.ac.service.announcementsService;
+package za.ac.service.eventService;
 
-import za.ac.domain.Announcement;
-import org.springframework.stereotype.Service;
-import java.util.Set;
+import za.ac.domain.Event;
 
-@Service
-public class AnnouncementServiceImpl implements IAnnouncementService {
-
+public class EventServiceImpl implements IEventService{
     @Override
-    public Set<Announcement> getAll() {
-        return Set.of();
-    }
-
-    @Override
-    public Announcement create(Announcement announcement) {
+    public Event create(Event event) {
         return null;
     }
 
     @Override
-    public Announcement read(String s) {
+    public Event read(String s) {
         return null;
     }
 
     @Override
-    public Announcement update(Announcement announcement) {
+    public Event update(Event event) {
         return null;
     }
 
