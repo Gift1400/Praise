@@ -5,16 +5,110 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf786edf-1f75-4fb5-ad5b-9de0fa5b9fbe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/service/eventService/IEventService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/ac/za/serviceTest/AnnouncementServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/ac/za/serviceTest/DonationServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/ac/za/serviceTest/EventServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/ac/za/serviceTest/MemberServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Announcement$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Announcement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/AnnouncementFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/AnnouncementFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/AnnouncementType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Donation$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Donation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/DonationFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/DonationFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Event$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/EventFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/EventRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Eventfactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Helper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/IMemberRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Member$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/MemberFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/MemberFactoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/MemberRepositoryImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_06_2026_21_42__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Announcement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Donation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IAnnouncementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IAnnouncementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IDonationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IDonationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IEventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/repository/IEventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/PraiseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/PraiseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controller/AnnouncementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/controller/AnnouncementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controller/DonationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/controller/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/controller/DonationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/domain/Announcement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/domain/Donation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Enums/AnnouncementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/domain/Enums/AnnouncementType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/domain/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/factory/AnnouncementFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/factory/AnnouncementFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/factory/DonationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/factory/DonationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/factory/EventFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/factory/EventFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/factory/MemberFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/factory/MemberFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IAnnouncementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/repository/IAnnouncementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IDonationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/repository/IDonationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IEventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/repository/IEventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/repository/IMemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/repository/IMemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/service/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/service/IService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/service/announcementsService/AnnouncementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/service/announcementsService/AnnouncementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/service/announcementsService/IAnnouncementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/service/announcementsService/IAnnouncementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/service/donationService/DonationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/service/donationService/DonationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/service/donationService/IDonationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/service/donationService/IDonationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/service/eventService/EventServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/service/eventService/EventServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/service/eventService/IEventService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/service/memberService/IMemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/service/memberService/IMemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/service/memberService/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/service/memberService/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ac/za/util/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/factoryTest/AnnouncementFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ac/za/factoryTest/AnnouncementFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/factoryTest/DonationFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ac/za/factoryTest/DonationFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/factoryTest/EventFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ac/za/factoryTest/EventFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/factoryTest/MemberFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ac/za/factoryTest/MemberFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/PraiseApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/controller/AnnouncementController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/controller/DonationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/controller/EventController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/controller/MemberController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/domain/Announcement$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/domain/Announcement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/domain/Donation$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/domain/Donation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/domain/Enums/AnnouncementType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/domain/Event$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/domain/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/domain/Member$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/domain/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/factory/AnnouncementFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/factory/DonationFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/factory/Eventfactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/factory/MemberFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/repository/IAnnouncementRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/repository/IDonationRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/repository/IEventRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/repository/IMemberRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/service/IService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/service/announcementsService/AnnouncementServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/service/announcementsService/IAnnouncementService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/service/donationService/DonationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/service/donationService/IDonationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/service/eventService/EventServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/service/eventService/IEventService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/service/memberService/IMemberService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/service/memberService/MemberServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/util/Helper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/factoryTest/AnnouncementFactoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/test-classes/factoryTest/AnnouncementFactoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/factoryTest/DonationFactoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/test-classes/factoryTest/DonationFactoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/factoryTest/EventFactoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/test-classes/factoryTest/EventFactoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/factoryTest/MemberFactoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/test-classes/factoryTest/MemberFactoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +118,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -94,6 +188,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JUnit.DonationFactoryTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.MemberFactoryTest.createMember (1).executor&quot;: &quot;Run&quot;,
     &quot;JUnit.MemberFactoryTest.executor&quot;: &quot;Debug&quot;,
     &quot;JUnit.MemberFactoryTest.memberIdNull.executor&quot;: &quot;Run&quot;,
@@ -101,16 +196,21 @@
     &quot;JUnit.MemberFactoryTest.memberUserNameTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.MemberFactoryTest.nullMemberIdTest.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.PraiseApplication.executor&quot;: &quot;Run&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;230221432&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Praise&quot;,
@@ -122,6 +222,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -145,10 +246,27 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ac.za.serviceTest" />
+      <recent name="ac.za.service.memberService" />
       <recent name="factory" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MemberFactoryTest">
+  <component name="RunManager" selected="JUnit.DonationFactoryTest">
+    <configuration name="DonationFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Holy-Trinity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ac.za.factoryTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ac.za.factoryTest" />
+      <option name="MAIN_CLASS_NAME" value="ac.za.factoryTest.DonationFactoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MemberFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Holy-Trinity" />
       <option name="PACKAGE_NAME" value="factoryTest" />
@@ -178,16 +296,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberFactoryTest.memberUserNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Holy-Trinity" />
-      <option name="PACKAGE_NAME" value="factoryTest" />
-      <option name="MAIN_CLASS_NAME" value="factoryTest.MemberFactoryTest" />
-      <option name="METHOD_NAME" value="memberUserNameTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MemberFactoryTest.nullMemberIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Holy-Trinity" />
       <option name="PACKAGE_NAME" value="factoryTest" />
@@ -209,18 +317,18 @@
     </configuration>
     <configuration name="PraiseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Holy-Trinity" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="PraiseApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ac.za.PraiseApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DonationFactoryTest" />
         <item itemvalue="JUnit.MemberFactoryTest" />
         <item itemvalue="JUnit.MemberFactoryTest.memberIdNull" />
         <item itemvalue="JUnit.MemberFactoryTest.nullMemberIdTest" />
         <item itemvalue="JUnit.MemberFactoryTest.memberIdTest" />
-        <item itemvalue="JUnit.MemberFactoryTest.memberUserNameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -231,6 +339,9 @@
         <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
       </set>
     </attachedChunks>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -253,6 +364,16 @@
       <workItem from="1781453181502" duration="49000" />
       <workItem from="1781453617657" duration="2656000" />
       <workItem from="1781459376920" duration="5070000" />
+      <workItem from="1781647661460" duration="1747000" />
+      <workItem from="1781895297917" duration="736000" />
+      <workItem from="1782344513468" duration="12000" />
+      <workItem from="1783696494335" duration="1550000" />
+      <workItem from="1783698097938" duration="835000" />
+      <workItem from="1783698971962" duration="6019000" />
+      <workItem from="1783775594311" duration="3654000" />
+      <workItem from="1783959631875" duration="3177000" />
+      <workItem from="1784020270641" duration="3079000" />
+      <workItem from="1784026629050" duration="2724000" />
     </task>
     <servers />
   </component>
