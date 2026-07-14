@@ -29,9 +29,9 @@ A full-stack web application built to help churches manage their day-to-day oper
 | Build Tool | Maven |
 | Frontend | Coming soon |
 
----
-
 ## Project Structure
+
+```
 Praise/
 ├── backend/
 │   ├── src/
@@ -46,15 +46,14 @@ Praise/
 │   │   │       └── application.properties
 │   │   └── test/
 │   │       └── java/
-│   │           └── factoryTest/      # Unit tests
-│   │           └── repositoryTest/   # Database operations
-|   |           └── serviceTest/      # Business logic
-|   |           └── controllerTest/   # API endpoints
+│   │           ├── factoryTest/      # Unit tests
+│   │           ├── repositoryTest/   # Database operations
+│   │           ├── serviceTest/      # Business logic
+│   │           └── controllerTest/   # API endpoints
 │   └── pom.xml
-├── frontend/
+├── frontend/ #comming soon
 └── README.md
-
----
+```
 
 ## Domain Classes
 
