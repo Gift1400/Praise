@@ -1,7 +1,7 @@
 package factoryTest;
 
-import factory.DonationFactory;
-import domain.Donation;
+import za.ac.factory.DonationFactory;
+import za.ac.domain.Donation;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

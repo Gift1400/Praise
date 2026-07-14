@@ -1,9 +1,9 @@
 package factoryTest;
 
-import factory.AnnouncementFactory;
+import za.ac.factory.AnnouncementFactory;
 import org.junit.jupiter.api.Test;
-import domain.Announcement;
-import domain.Enums.AnnouncementType;
+import za.ac.domain.Announcement;
+import za.ac.domain.Enums.AnnouncementType;
 
 import static org.junit.jupiter.api.Assertions.*;
 

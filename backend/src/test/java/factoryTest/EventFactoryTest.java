@@ -1,7 +1,7 @@
 package factoryTest;
 
-import domain.Event;
-import factory.EventFactory;
+import za.ac.domain.Event;
+import za.ac.factory.EventFactory;
 import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,7 +1,7 @@
 package factoryTest;
 
-import domain.Member;
-import factory.MemberFactory;
+import za.ac.domain.Member;
+import za.ac.factory.MemberFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
