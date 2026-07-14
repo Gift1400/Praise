@@ -9,4 +9,3 @@ public interface IAnnouncementService extends IService<Announcement, String> {
 
     Set<Announcement> getAll();
 }
-}
