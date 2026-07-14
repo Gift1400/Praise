@@ -1,32 +1,29 @@
-package za.ac.service.eventService;
+package za.ac.service.announcementsService;
 
-import za.ac.domain.Event;
-import za.ac.repository.IEventRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import za.ac.domain.Announcement;
 import org.springframework.stereotype.Service;
+import java.util.Set;
 
 @Service
-public class EventServiceImpl implements IEventService{
+public class AnnouncementServiceImpl implements IAnnouncementService {
 
-    private IEventRepository repository;
-
-    @Autowired
-    public EventServiceImpl (IEventRepository repository){
-        this.repository = repository;
+    @Override
+    public Set<Announcement> getAll() {
+        return Set.of();
     }
 
     @Override
-    public Event create(Event event) {
-        return this.repository.save(event);
+    public Announcement create(Announcement announcement) {
+        return null;
     }
 
     @Override
-    public Event read(String id) {
-        return this.repository.findById(id).
+    public Announcement read(String s) {
+        return null;
     }
 
     @Override
-    public Event update(Event event) {
+    public Announcement update(Announcement announcement) {
         return null;
     }
 
