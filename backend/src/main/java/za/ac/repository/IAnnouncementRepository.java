@@ -2,8 +2,10 @@ package za.ac.repository;
 
 import za.ac.domain.Announcement;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
+import java.util.Set;
+
 public interface IAnnouncementRepository extends JpaRepository<Announcement, String> {
+
+    Set<Announcement> getAll();
 }

@@ -99,3 +99,10 @@ public class Announcement {
         }
     }
 }
+/*Praise.java
+
+     Announcement class
+
+     Author: Ongeziwe Raqa (230064728)
+
+     Date: 22 June 2026 */ 

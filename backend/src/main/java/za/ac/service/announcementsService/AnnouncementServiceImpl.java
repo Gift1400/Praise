@@ -1,12 +1,11 @@
 package za.ac.service.announcementsService;
 
-import org.springframework.stereotype.Service;
 import za.ac.domain.Announcement;
-
+import org.springframework.stereotype.Service;
 import java.util.Set;
 
 @Service
-public class AnnouncementServiceImpl implements IAnnouncementService{
+public class AnnouncementServiceImpl implements IAnnouncementService {
 
     @Override
     public Set<Announcement> getAll() {
@@ -32,6 +31,4 @@ public class AnnouncementServiceImpl implements IAnnouncementService{
     public boolean delete(String s) {
         return false;
     }
-
-
 }

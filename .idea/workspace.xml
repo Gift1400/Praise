@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf786edf-1f75-4fb5-ad5b-9de0fa5b9fbe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/za/ac/controller/AnnouncementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/za/ac/controller/AnnouncementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/za/ac/controller/DonationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/za/ac/controller/DonationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/za/ac/domain/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/za/ac/domain/Announcement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/za/ac/domain/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/za/ac/domain/Donation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/za/ac/repository/IAnnouncementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/za/ac/repository/IAnnouncementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/za/ac/service/announcementsService/AnnouncementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/za/ac/service/announcementsService/AnnouncementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/za/ac/service/announcementsService/IAnnouncementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/za/ac/service/announcementsService/IAnnouncementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/za/ac/service/eventService/IEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/za/ac/service/eventService/IEventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/za/ac/service/memberService/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/za/ac/service/memberService/MemberServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
     </list>
@@ -56,6 +67,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -85,47 +97,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.DonationFactoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MemberFactoryTest.createMember (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MemberFactoryTest.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.MemberFactoryTest.memberIdNull.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MemberFactoryTest.memberIdTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MemberFactoryTest.memberUserNameTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MemberFactoryTest.nullMemberIdTest.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.PraiseApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;230221432&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Praise&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.DonationFactoryTest.executor": "Run",
+    "JUnit.MemberFactoryTest.createMember (1).executor": "Run",
+    "JUnit.MemberFactoryTest.executor": "Debug",
+    "JUnit.MemberFactoryTest.memberIdNull.executor": "Run",
+    "JUnit.MemberFactoryTest.memberIdTest.executor": "Run",
+    "JUnit.MemberFactoryTest.memberUserNameTest.executor": "Run",
+    "JUnit.MemberFactoryTest.nullMemberIdTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.PraiseApplication.executor": "Run",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "Merging 230221432",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Praise",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Praise\src" />
@@ -274,6 +286,7 @@
       <workItem from="1784020270641" duration="3079000" />
       <workItem from="1784026629050" duration="2724000" />
       <workItem from="1784066063069" duration="337000" />
+      <workItem from="1784113890064" duration="1196000" />
     </task>
     <servers />
   </component>

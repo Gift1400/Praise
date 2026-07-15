@@ -1,29 +1,17 @@
 package za.ac.service.memberService;
 
 import za.ac.domain.Member;
-import za.ac.repository.IMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
 public class MemberServiceImpl implements IMemberService {
-
-    private final IMemberRepository repository;
-
-    @Autowired
-    public MemberServiceImpl(IMemberRepository repository) {
-        this.repository = repository;
-    }
-
 
     @Override
     public Member create(Member member) {
-        return this.repository.save(member);
+        return null;
     }
 
     @Override
     public Member read(String s) {
-        return this.repository.findById(s).orElse(null);
+        return null;
     }
 
     @Override
