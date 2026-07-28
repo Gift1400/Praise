@@ -1,4 +1,7 @@
 package za.ac.service.donationService;
 
-public interface IDonationService {
+import za.ac.domain.Donation;
+import za.ac.service.IService;
+
+public interface IDonationService extends IService<Donation, Integer> {
 }

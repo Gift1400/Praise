@@ -17,6 +17,8 @@ public class Announcement {
     private String message;
     private LocalDate date;
     private String churchSiteId;
+
+    @Embedded
     private AnnouncementType type;
 
     protected Announcement(){}

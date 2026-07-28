@@ -3,7 +3,6 @@ package za.ac.domain;
 
 import jakarta.persistence.*;
 
-
 @Entity
 @Table(name = "members")
 public class Member {

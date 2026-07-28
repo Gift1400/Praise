@@ -1,4 +1,7 @@
 package za.ac.service.eventService;
 
-public interface IEventService {
+import za.ac.domain.Event;
+import za.ac.service.IService;
+
+public interface IEventService extends IService<Event, String> {
 }
