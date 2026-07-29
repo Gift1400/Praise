@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import za.ac.domain.Member;
 import za.ac.repository.IMemberRepository;
 
+import java.util.List;
+
 @Service
 public class MemberServiceImpl implements IMemberService {
 
@@ -37,5 +39,10 @@ public class MemberServiceImpl implements IMemberService {
             return true;
         };
         return false;
+    }
+
+    @Override
+    public List<Member> getAllMembers() {
+        return memberRepository.findAll();
     }
 }
