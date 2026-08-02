@@ -3,23 +3,25 @@ package za.ac.domain;
 
 import jakarta.persistence.*;
 
+import java.security.PrivateKey;
+import za.ac.domain.ContactDetails;
+
 @Entity
 @Table(name = "members")
 public class Member {
     @Id
     private String memberId;
-
     private String userName;
-    private String email;
-    private String contactNumber;
+
+    @Embedded
+    private ContactDetails contactDetails;
 
     protected Member(){}
 
     public Member(Builder builder){
         this.memberId = builder.memberId;
         this.userName = builder.userName;
-        this.email = builder.email;
-        this.contactNumber = builder.contactNumber;
+        this.contactDetails = builder.contactDetails;
     }
 
     public String getMemberId(){
@@ -30,32 +32,25 @@ public class Member {
         return userName;
     }
 
-    public String getEmail(){
-        return email;
-    }
-
-    public String getContactNumber(){
-        return contactNumber;
+    public ContactDetails getContactDetails(){
+        return contactDetails;
     }
 
     public String toString(){
         return "Member ID: " + memberId + "\n" +
                 "Username: " + userName + "\n" +
-                "Email: " + email + "\n" +
-                "Contact Number: " + contactNumber ;
+                "Contact Details{ " + contactDetails + "}" ;
     }
 
     public static class Builder{
         private String memberId;
         private String userName;
-        private String email;
-        private String contactNumber;
+        private ContactDetails contactDetails;
 
         public Builder copy(Member member){
             this.memberId = member.memberId;
             this.userName = member.userName;
-            this.email = member.email;
-            this.contactNumber = member.contactNumber;
+            this.contactDetails = member.contactDetails;
             return this;
         }
 
@@ -69,13 +64,8 @@ public class Member {
             return this;
         }
 
-        public Builder setEmail(String email){
-            this.email = email;
-            return this;
-        }
-
-        public Builder setContactNumber(String contactNumber){
-            this.contactNumber = contactNumber;
+        public Builder setContactDetails(ContactDetails contactDetails){
+            this.contactDetails = contactDetails;
             return this;
         }
 

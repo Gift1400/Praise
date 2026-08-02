@@ -12,13 +12,12 @@ public class Announcement {
 
     @Id
     private String announcementId;
-
     private String title;
     private String message;
     private LocalDate date;
     private String churchSiteId;
 
-    @Embedded
+    @Enumerated(EnumType.STRING)
     private AnnouncementType type;
 
     protected Announcement(){}

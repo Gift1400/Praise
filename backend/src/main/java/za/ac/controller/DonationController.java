@@ -9,8 +9,13 @@ import za.ac.service.donationService.DonationServiceImpl;
 @RequestMapping("api/donations")
 public class DonationController {
 
+    public final DonationServiceImpl donationService;
+
     @Autowired
-    private DonationServiceImpl donationService;
+    public DonationController(DonationServiceImpl donationService) {
+        this.donationService = donationService;
+    }
+
 
     @PostMapping("/create")
     public Donation donation(@RequestBody Donation donation){

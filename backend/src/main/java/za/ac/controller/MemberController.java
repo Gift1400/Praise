@@ -12,7 +12,6 @@ import java.util.List;
 @RequestMapping("api/member")
 public class MemberController {
 
-    @Autowired
     private MemberServiceImpl memberService;
 
     @PostMapping("/create")
@@ -20,7 +19,7 @@ public class MemberController {
         return memberService.create(student);
     }
 
-    @GetMapping("/read/{id}")
+    @GetMapping("/read/{memberId}")
     public Member read(@PathVariable String memberId) {
         return memberService.read(memberId);
     }
@@ -30,7 +29,7 @@ public class MemberController {
         return memberService.update(member);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/{memberId}")
     public ResponseEntity<String> delete(@PathVariable String memberId) {
         boolean deleted = memberService.delete(memberId);
         if (deleted) {

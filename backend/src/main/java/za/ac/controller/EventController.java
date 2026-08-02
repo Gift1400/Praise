@@ -9,7 +9,6 @@ import za.ac.service.eventService.EventServiceImpl;
 @RequestMapping("api/event")
 public class EventController {
 
-    @Autowired
     private EventServiceImpl eventService;
 
     @PostMapping("/create")
@@ -17,7 +16,7 @@ public class EventController {
         return eventService.create(event);
     }
 
-    @GetMapping("/read/{evendId}")
+    @GetMapping("/read/{eventId}")
     public Event read(@PathVariable String eventId){
         return eventService.read(eventId);
     }
