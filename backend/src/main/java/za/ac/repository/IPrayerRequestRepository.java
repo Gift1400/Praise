@@ -1,4 +1,7 @@
 package za.ac.repository;
 
-public interface IPrayerRequestRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import za.ac.domain.PrayerRequest;
+
+public interface IPrayerRequestRepository extends JpaRepository<PrayerRequest, String> {
 }

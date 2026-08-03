@@ -4,14 +4,14 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "rsvp")
-public class RSVP {
+public class Rsvp {
     @Id
     private String rsvpId;
     private String status;
 
-    protected RSVP(){}
+    protected Rsvp(){}
 
-    public RSVP(Builder builder){
+    public Rsvp(Builder builder){
         this.rsvpId = builder.rsvpId;
         this.status = builder.status;
     }
@@ -29,7 +29,7 @@ public class RSVP {
         private String rsvpId;
         private String status;
 
-        public Builder copy(RSVP rsvp){
+        public Builder copy(Rsvp rsvp){
             this.rsvpId = rsvp.rsvpId;
             this.status = rsvp.status;
             return this;
@@ -44,8 +44,8 @@ public class RSVP {
             return this;
         }
 
-        public RSVP build(){
-            return new RSVP(this);
+        public Rsvp build(){
+            return new Rsvp(this);
         }
     }
 }
