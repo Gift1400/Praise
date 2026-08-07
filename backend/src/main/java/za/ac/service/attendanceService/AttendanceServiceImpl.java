@@ -45,7 +45,7 @@ public class AttendanceServiceImpl implements IAttendance{
     }
 
     @Override
-    public Set<Attendance> getByMember(String memberId) {
+    public Set<Attendance> getByMemberId(String memberId) {
         return Set.of();
     }
 
