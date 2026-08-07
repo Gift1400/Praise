@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import za.ac.domain.Event;
 import za.ac.repository.IEventRepository;
 
+import java.util.Set;
+
 @Service
 public class EventServiceImpl implements IEventService {
 
@@ -38,5 +40,20 @@ public class EventServiceImpl implements IEventService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Set<Event> getAll() {
+        return Set.of();
+    }
+
+    @Override
+    public Set<Event> getUpcomingEvents() {
+        return Set.of();
+    }
+
+    @Override
+    public Set<Event> getEventByChurchSite(String churchSiteId) {
+        return Set.of();
     }
 }

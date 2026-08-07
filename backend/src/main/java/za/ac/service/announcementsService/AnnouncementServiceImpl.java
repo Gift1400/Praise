@@ -3,6 +3,7 @@ package za.ac.service.announcementsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import za.ac.domain.Announcement;
 import org.springframework.stereotype.Service;
+import za.ac.domain.Enums.AnnouncementType;
 import za.ac.repository.IAnnouncementRepository;
 
 import java.util.Set;
@@ -17,10 +18,6 @@ public class AnnouncementServiceImpl implements IAnnouncementService {
         this.repository = repository;
     }
 
-    @Override
-    public Set<Announcement> getAll() {
-        return Set.of();
-    }
 
     @Override
     public Announcement create(Announcement announcement) {
@@ -45,4 +42,19 @@ public class AnnouncementServiceImpl implements IAnnouncementService {
         };
         return false;
     }
+    @Override
+    public Set<Announcement> getAll() {
+        return Set.of();
+    }
+
+    @Override
+    public Set<Announcement> getByType(AnnouncementType announcementType) {
+        return Set.of();
+    }
+
+    @Override
+    public Set<Announcement> getByChurchSite(String churchSiteId) {
+        return Set.of();
+    }
+
 }

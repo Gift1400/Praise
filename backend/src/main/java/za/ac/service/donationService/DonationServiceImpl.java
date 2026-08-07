@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import za.ac.domain.Donation;
 import za.ac.repository.IDonationRepository;
 
+import java.util.Set;
+
 @Service
 public class DonationServiceImpl implements IDonationService {
 
@@ -37,5 +39,20 @@ public class DonationServiceImpl implements IDonationService {
             return true;
         };
         return false;
+    }
+
+    @Override
+    public Set<Donation> getAll() {
+        return Set.of();
+    }
+
+    @Override
+    public Set<Donation> getDonationsByMember(String memberId) {
+        return Set.of();
+    }
+
+    @Override
+    public double getTotalDonations() {
+        return 0;
     }
 }
