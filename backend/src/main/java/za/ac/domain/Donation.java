@@ -6,12 +6,10 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@Table(name = "donatons")
+@Table(name = "donations")
 public class Donation {
-
     @Id
     private int donation_id;
-
     private double amount;
     private LocalDate donation_date;
     private String donation_type; // e.g. Cash// , Online

@@ -11,7 +11,6 @@ public class Event {
 
     @Id
     private String eventId;
-
     private String title;
     private String description;
     private LocalDate date;
@@ -22,45 +21,45 @@ public class Event {
     protected Event(){}
 
     private Event(Builder builder) {
-        this.eventId           = builder.eventId;
-        this.title             = builder.title;
-        this.description       = builder.description;
-        this.date              = builder.date;
-        this.time              = builder.time;
-        this.location          = builder.location;
+        this.eventId = builder.eventId;
+        this.title = builder.title;
+        this.description = builder.description;
+        this.date = builder.date;
+        this.time = builder.time;
+        this.location = builder.location;
         this.expectedAttendees = builder.expectedAttendees;
     }
 
-    public String    getEventId()           { return eventId; }
-    public String    getTitle()             { return title; }
-    public String    getDescription()       { return description; }
-    public LocalDate getDate()              { return date; }
-    public String    getTime()              { return time; }
-    public String    getLocation()          { return location; }
-    public int       getExpectedAttendees() { return expectedAttendees; }
+    public String getEventId() { return eventId; }
+    public String getTitle() { return title; }
+    public String getDescription() { return description; }
+    public LocalDate getDate() { return date; }
+    public String getTime()  { return time; }
+    public String getLocation() { return location; }
+    public int getExpectedAttendees() { return expectedAttendees; }
 
     @Override
     public String toString() {
         return "Event{" +
-                "eventId='"           + eventId           + '\'' +
-                ", title='"           + title             + '\'' +
-                ", description='"     + description       + '\'' +
-                ", date="             + date              +
-                ", time='"            + time              + '\'' +
-                ", location='"        + location          + '\'' +
+                "eventId=" + eventId + '\'' +
+                ", title=" + title + '\'' +
+                ", description=" + description + '\'' +
+                ", date=" + date +
+                ", time=" + time  + '\'' +
+                ", location=" + location  + '\'' +
                 ", expectedAttendees=" + expectedAttendees +
                 '}';
     }
 
     public static class Builder {
 
-        private String    eventId;
-        private String    title;
-        private String    description;
+        private String eventId;
+        private String title;
+        private String description;
         private LocalDate date;
-        private String    time;
-        private String    location;
-        private int       expectedAttendees;
+        private String time;
+        private String location;
+        private int expectedAttendees;
 
         public Builder eventId(String eventId) {
             this.eventId = eventId;

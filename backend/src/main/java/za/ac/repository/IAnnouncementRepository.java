@@ -6,6 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Set;
 
 public interface IAnnouncementRepository extends JpaRepository<Announcement, String> {
-
     Set<Announcement> getAll();
 }

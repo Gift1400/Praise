@@ -1,34 +1,60 @@
 package za.ac.service.announcementsService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import za.ac.domain.Announcement;
 import org.springframework.stereotype.Service;
+import za.ac.domain.Enums.AnnouncementType;
+import za.ac.repository.IAnnouncementRepository;
+
 import java.util.Set;
 
 @Service
 public class AnnouncementServiceImpl implements IAnnouncementService {
 
+    public final IAnnouncementRepository repository;
+
+    @Autowired
+    public AnnouncementServiceImpl(IAnnouncementRepository repository) {
+        this.repository = repository;
+    }
+
+
+    @Override
+    public Announcement create(Announcement announcement) {
+        return repository.save(announcement);
+    }
+
+    @Override
+    public Announcement read(String announcementId) {
+        return repository.findById(announcementId).orElse(null);
+    }
+
+    @Override
+    public Announcement update(Announcement announcement) {
+        return repository.save(announcement);
+    }
+
+    @Override
+    public boolean delete(String announcementId) {
+        if(repository.existsById(announcementId)){
+            repository.deleteById(announcementId);
+            return true;
+        };
+        return false;
+    }
     @Override
     public Set<Announcement> getAll() {
         return Set.of();
     }
 
     @Override
-    public Announcement create(Announcement announcement) {
-        return null;
+    public Set<Announcement> getByType(AnnouncementType announcementType) {
+        return Set.of();
     }
 
     @Override
-    public Announcement read(String s) {
-        return null;
+    public Set<Announcement> getByChurchSite(String churchSiteId) {
+        return Set.of();
     }
 
-    @Override
-    public Announcement update(Announcement announcement) {
-        return null;
-    }
-
-    @Override
-    public boolean delete(String s) {
-        return false;
-    }
 }

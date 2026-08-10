@@ -1,45 +1,46 @@
 package za.ac.controller;
 
-import za.ac.domain.Member;
-import za.ac.repository.IMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import za.ac.domain.Member;
+import za.ac.service.memberService.MemberServiceImpl;
+
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/members")
+@RequestMapping("api/member")
 public class MemberController {
 
-    private final IMemberRepository memberRepository;
+    private MemberServiceImpl memberService;
 
-    //singleton
-    public MemberController(IMemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
+    @PostMapping("/create")
+    public Member create(@RequestBody Member student) {
+        return memberService.create(student);
     }
 
-    @GetMapping
-    public List<Member> getAl(){
-        return memberRepository.findAll();
+    @GetMapping("/read/{memberId}")
+    public Member read(@PathVariable String memberId) {
+        return memberService.read(memberId);
     }
 
-    @GetMapping("/{id}")
-    public Member getById(@PathVariable String id){
-        return memberRepository.findById(id).orElse(null);
+    @PostMapping("/update")
+    public Member update(@RequestBody Member member) {
+        return memberService.update(member);
     }
 
-    @PostMapping
-    public Member create(@RequestBody Member member) {
-        return memberRepository.save(member);
+    @DeleteMapping("/delete/{memberId}")
+    public ResponseEntity<String> delete(@PathVariable String memberId) {
+        boolean deleted = memberService.delete(memberId);
+        if (deleted) {
+            return ResponseEntity.ok("Deleted successfully");
+        }
+        return ResponseEntity.badRequest().body("Member not found");
     }
 
-    @PutMapping("/{id}")
-    public Member update(@PathVariable String id, @RequestBody Member member){
-        return memberRepository.save(member);
+    @GetMapping("/getAll")
+    public List<Member> getAll() {
+        return memberService.getAllMembers();
     }
 
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable String id) {
-        memberRepository.deleteById(id);
-    }
-
-    
 }
