@@ -7,6 +7,6 @@ import za.ac.service.IService;
 import java.util.*;
 
 public interface IBibleVerse extends IService <BibleVerse, String>{
-    Set<BibleVerse> getAll();
-    Set<BibleVerse> getVerseBySituation(LifeSituation situation);
+    List<BibleVerse> getAll();
+    List<BibleVerse> getVerseBySituation(LifeSituation situation);
 }

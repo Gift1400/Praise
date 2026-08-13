@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.domain.ChurchSite;
 import za.ac.repository.IChurchSiteRepository;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class ChurchSiteServiceImpl implements IChurchSite{
@@ -13,29 +13,34 @@ public class ChurchSiteServiceImpl implements IChurchSite{
 
     @Autowired
     public ChurchSiteServiceImpl(IChurchSiteRepository repository){ this.repository = repository;}
+
     @Override
     public ChurchSite create(ChurchSite churchSite) {
-        return null;
+        return repository.save(churchSite);
     }
 
     @Override
-    public ChurchSite read(String s) {
-        return null;
+    public ChurchSite read(String churchSiteId) {
+        return repository.findById(churchSiteId).orElse(null);
     }
 
     @Override
     public ChurchSite update(ChurchSite churchSite) {
-        return null;
+        return repository.save(churchSite);
     }
 
     @Override
-    public boolean delete(String s) {
+    public boolean delete(String churchSiteId) {
+        if(repository.existsById(churchSiteId)){
+            repository.deleteById(churchSiteId);
+            return true;
+        }
         return false;
     }
 
     @Override
-    public List<String> getAll() {
-        return List.of();
+    public List<ChurchSite> getAll() {
+        return repository.findAll();
     }
 
 }

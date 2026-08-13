@@ -5,7 +5,7 @@ import za.ac.service.IService;
 import java.util.*;
 
 public interface IDonationService extends IService<Donation, Integer> {
-    Set<Donation> getAll();
-    Set<Donation> getDonationsByMember(String memberId);
+    List<Donation> getAll();
+    List<Donation> getDonationsByMember(String memberId);
     double getTotalDonations();
 }

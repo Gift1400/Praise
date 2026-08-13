@@ -17,27 +17,31 @@ public class TestimonyServiceImpl implements ITestimony{
 
     @Override
     public Testimony create(Testimony testimony) {
-        return null;
+        return repository.save(testimony);
     }
 
     @Override
-    public Testimony read(String s) {
-        return null;
+    public Testimony read(String testimonyId) {
+        return repository.findById(testimonyId).orElse(null);
     }
 
     @Override
     public Testimony update(Testimony testimony) {
-        return null;
+        return repository.save(testimony);
     }
 
     @Override
-    public boolean delete(String s) {
-        return false;
+    public boolean delete(String testimonyId) {
+       if(repository.existsById(testimonyId)){
+           repository.deleteById(testimonyId);
+           return true;
+       }
+       return false;
     }
 
 
     @Override
-    public Set<Testimony> getAll() {
-        return Set.of();
+    public List<Testimony> getAll() {
+        return repository.findAll();
     }
 }

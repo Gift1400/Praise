@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.domain.Leader;
 import za.ac.repository.ILeaderRepository;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class LeaderServiceImpl implements ILeader{
@@ -18,27 +18,31 @@ public class LeaderServiceImpl implements ILeader{
 
     @Override
     public Leader create(Leader leader) {
-        return null;
+        return repository.save(leader);
     }
 
     @Override
-    public Leader read(String s) {
-        return null;
+    public Leader read(String leaderId) {
+        return repository.findById(leaderId).orElse(null);
     }
 
     @Override
     public Leader update(Leader leader) {
-        return null;
+        return repository.save(leader);
     }
 
     @Override
-    public boolean delete(String s) {
+    public boolean delete(String leaderId) {
+        if(repository.existsById(leaderId)){
+            repository.deleteById(leaderId);
+            return true;
+        }
         return false;
     }
 
     @Override
-    public List<String> getAll() {
-        return List.of();
+    public List<Leader> getAll() {
+        return repository.findAll();
     }
 
 }

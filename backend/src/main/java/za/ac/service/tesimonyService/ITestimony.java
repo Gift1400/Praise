@@ -6,5 +6,5 @@ import za.ac.service.IService;
 import java.util.*;
 
 public interface ITestimony extends IService <Testimony, String>{
-    Set<Testimony> getAll();
+    List<Testimony> getAll();
 }

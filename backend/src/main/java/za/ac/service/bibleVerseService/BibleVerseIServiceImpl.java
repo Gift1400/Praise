@@ -1,40 +1,59 @@
 package za.ac.service.bibleVerseService;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import za.ac.domain.BibleVerse;
 import za.ac.domain.Enums.LifeSituation;
+import za.ac.repository.IBibleVerseRepository;
 
-import java.util.Set;
+import java.util.Collections;
+import java.util.*;
 
+@Service
 public class BibleVerseIServiceImpl implements IBibleVerse{
 
-    @Override
-    public BibleVerse create(BibleVerse bibleVerse) {
-        return null;
+    private final IBibleVerseRepository repository;
+
+
+    public BibleVerseIServiceImpl(IBibleVerseRepository repository) {
+        this.repository = repository;
     }
 
     @Override
-    public BibleVerse read(String s) {
-        return null;
+    public BibleVerse create(BibleVerse bibleVerse) {
+        return repository.save(bibleVerse);
+    }
+
+    @Override
+    public BibleVerse read(String bibleVerseId) {
+        return repository.findById(bibleVerseId).orElse(null);
     }
 
     @Override
     public BibleVerse update(BibleVerse bibleVerse) {
-        return null;
+        return repository.save(bibleVerse);
     }
 
     @Override
-    public boolean delete(String s) {
+    public boolean delete(String bibleVerseId) {
+        if(repository.existsById(bibleVerseId)){
+            repository.deleteById(bibleVerseId);
+            return true;
+        }
         return false;
     }
 
     @Override
-    public Set<BibleVerse> getAll() {
-        return Set.of();
+    public List<BibleVerse> getAll() {
+        return repository.findAll();
     }
 
     @Override
-    public Set<BibleVerse> getVerseBySituation(LifeSituation situation) {
-        return Set.of();
+    public List<BibleVerse> getVerseBySituation(LifeSituation situation) {
+        if(situation == null){
+            return Collections.emptyList();
+        }
+        return repository.getVerseBySituation(situation);
     }
 
 }
