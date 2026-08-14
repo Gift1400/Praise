@@ -60,6 +60,10 @@ public class Sermon {
             this.description = description;
             return this;
         }
+        public Builder setLocalDate(LocalDate date){
+            this.date = date;
+            return this;
+        }
 
         public Sermon build(){
             return new Sermon(this);
