@@ -1,4 +1,4 @@
-package factoryTest;
+package za.ac.factoryTest;
 
 import za.ac.domain.Event;
 import za.ac.factory.EventFactory;

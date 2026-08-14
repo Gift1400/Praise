@@ -18,7 +18,6 @@ public class MemberFactory {
             return null;
         }
 
-
         return new Member.Builder()
                 .setMemberId(memberId)
                 .setUserName(userName)

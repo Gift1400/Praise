@@ -1,4 +1,4 @@
-package factoryTest;
+package za.ac.factoryTest;
 
 import za.ac.factory.DonationFactory;
 import za.ac.domain.Donation;

@@ -1,4 +1,4 @@
-package factoryTest;
+package za.ac.factoryTest;
 
 import za.ac.domain.Member;
 import za.ac.factory.MemberFactory;
