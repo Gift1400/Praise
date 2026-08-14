@@ -6,8 +6,8 @@ public class ContactDetails {
     @Id
     private String contactDetailsId;
     private String email;
-    private long phone;
-    private long altPhone;
+    private String phone;
+    private String altPhone;
     private String address;
 
     public ContactDetails(Builder builder){
@@ -28,10 +28,10 @@ public class ContactDetails {
     public String getEmail(){
         return email;
     }
-    public long getPhone(){
+    public String getPhone(){
         return phone;
     }
-    public long getAltPhone(){
+    public String getAltPhone(){
         return altPhone;
     }
     public String getAddress(){
@@ -49,8 +49,8 @@ public class ContactDetails {
     public static class Builder{
         private String contactDetailsId;
         private String email;
-        private long phone;
-        private long altPhone;
+        private String phone;
+        private String altPhone;
         private String address;
 
         public Builder copy(ContactDetails contactDetails){
@@ -70,11 +70,11 @@ public class ContactDetails {
             this.email = email;
             return this;
         }
-        public Builder setPhone(long phone){
+        public Builder setPhone(String phone){
             this.phone = phone;
             return this;
         }
-        public Builder setAltPhone(long altPhone){
+        public Builder setAltPhone(String altPhone){
             this.altPhone = altPhone;
             return this;
         }
