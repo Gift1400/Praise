@@ -5,7 +5,7 @@ import za.ac.service.IService;
 import java.util.*;
 
 public interface IOutreachProgram extends IService <OutreachProgram, String>{
-    Set<OutreachProgram> getAll();
-    Set<OutreachProgram> getProgramsByMember(String memberId);
-    Set<OutreachProgram> getProgramsByLeader(String leaderId);
+    List<OutreachProgram> getAll();
+    List<OutreachProgram> getProgramsByMember(String memberId);
+    List<OutreachProgram> getProgramsByLeader(String leaderId);
 }

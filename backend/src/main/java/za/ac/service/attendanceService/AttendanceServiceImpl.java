@@ -40,13 +40,16 @@ public class AttendanceServiceImpl implements IAttendance{
     }
 
     @Override
-    public Set<Attendance> getAll() {
-        return Set.of();
+    public List<Attendance> getAll() {
+        return repository.findAll();
     }
 
     @Override
-    public Set<Attendance> getByMemberId(String memberId) {
-        return Set.of();
+    public List<Attendance> getByMemberId(String memberId) {
+        if (memberId == null) {
+            return Collections.emptyList(); //( Return an empty list if there's no data )
+        }
+        return repository.getByMemberId(memberId);
     }
 
 }

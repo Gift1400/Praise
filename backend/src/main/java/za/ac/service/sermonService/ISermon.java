@@ -6,6 +6,6 @@ import za.ac.service.IService;
 import java.util.*;
 
 public interface ISermon extends IService <Sermon, String>{
-    Set<Sermon> getAll();
-    Set<Sermon> getSermonsByLeader(String leaderId);
+    List<Sermon> getAll();
+    List<Sermon> getSermonsByLeader(String leaderId);
 }

@@ -5,8 +5,7 @@ import za.ac.domain.Announcement;
 import org.springframework.stereotype.Service;
 import za.ac.domain.Enums.AnnouncementType;
 import za.ac.repository.IAnnouncementRepository;
-
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class AnnouncementServiceImpl implements IAnnouncementService {
@@ -39,22 +38,28 @@ public class AnnouncementServiceImpl implements IAnnouncementService {
         if(repository.existsById(announcementId)){
             repository.deleteById(announcementId);
             return true;
-        };
+        }
         return false;
     }
     @Override
-    public Set<Announcement> getAll() {
-        return Set.of();
+    public List<Announcement> getAll() {
+        return repository.findAll();
     }
 
     @Override
-    public Set<Announcement> getByType(AnnouncementType announcementType) {
-        return Set.of();
+    public List<Announcement> getByType(AnnouncementType announcementType) {
+        if(announcementType == null){
+            return Collections.emptyList();
+        }
+        return repository.getByType(announcementType);
     }
 
     @Override
-    public Set<Announcement> getByChurchSite(String churchSiteId) {
-        return Set.of();
+    public List<Announcement> getByChurchSite(String churchSiteId) {
+        if(churchSiteId == null){
+            return Collections.emptyList();
+        }
+        return repository.getByChurchSite(churchSiteId);
     }
 
 }

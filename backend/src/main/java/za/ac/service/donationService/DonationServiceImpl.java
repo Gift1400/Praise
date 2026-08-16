@@ -4,55 +4,58 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.domain.Donation;
 import za.ac.repository.IDonationRepository;
-
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class DonationServiceImpl implements IDonationService {
 
-    public final IDonationRepository donationRepository;
+    public final IDonationRepository repository;
 
     @Autowired
     public DonationServiceImpl(IDonationRepository donationRepository) {
-        this.donationRepository = donationRepository;
+        this.repository = donationRepository;
     }
 
     @Override
     public Donation create(Donation donation) {
-        return donationRepository.save(donation);
+        return repository.save(donation);
     }
 
     @Override
     public Donation read(Integer donationId) {
-        return donationRepository.findById(donationId).orElse(null);
+        return repository.findById(donationId).orElse(null);
     }
 
     @Override
     public Donation update(Donation donation) {
-        return donationRepository.save(donation);
+        return repository.save(donation);
     }
 
     @Override
     public boolean delete(Integer donationId) {
-        if(donationRepository.existsById(donationId)){
-            donationRepository.deleteById(donationId);
+        if(repository.existsById(donationId)){
+            repository.deleteById(donationId);
             return true;
         };
         return false;
     }
 
     @Override
-    public Set<Donation> getAll() {
-        return Set.of();
+    public List<Donation> getAll() {
+        return repository.findAll();
     }
 
     @Override
-    public Set<Donation> getDonationsByMember(String memberId) {
-        return Set.of();
+    public List<Donation> getDonationsByMember(String memberId) {
+        if(memberId == null){
+            return Collections.emptyList();
+        }
+        return repository.getDonationsByMember(memberId);
     }
 
     @Override
     public double getTotalDonations() {
-        return 0;
+        Double total = repository.sumAllDonations();
+        return total != null ? total : 0.0;
     }
 }

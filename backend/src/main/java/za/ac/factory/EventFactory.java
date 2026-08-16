@@ -1,6 +1,8 @@
 package za.ac.factory;
 
 import za.ac.domain.Event;
+import za.ac.util.Helper;
+
 import java.time.LocalDate;
 
 public class EventFactory {
@@ -12,6 +14,14 @@ public class EventFactory {
                                     String time,
                                     String location,
                                     int expectedAttendees) {
+
+        if(Helper.isNullOrEmpty(eventId) ||
+        Helper.isNullOrEmpty(title) ||
+        Helper.isNullOrEmpty(description) ||
+        Helper.isNullOrEmpty(time) ||
+        Helper.isNullOrEmpty(location)){
+            return null;
+        }
         return new Event.Builder()
                 .eventId(eventId)
                 .title(title)

@@ -1,9 +1,13 @@
 package za.ac.repository;
 
+import org.springframework.data.jpa.repository.Query;
 import za.ac.domain.Donation;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import java.util.*;
 
-@Repository
 public interface IDonationRepository extends JpaRepository<Donation, Integer> {
+    List<Donation> getDonationsByMember(String memberId);
+
+    @Query("SELECT SUM(d.amount) FROM Donation d")
+    Double sumAllDonations();
 }

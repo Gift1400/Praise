@@ -23,8 +23,8 @@ public class MemberServiceImpl implements IMemberService {
     }
 
     @Override
-    public Member read(String s) {
-        return memberRepository.findById(s).orElse(null);
+    public Member read(String memberId) {
+        return memberRepository.findById(memberId).orElse(null);
     }
 
     @Override

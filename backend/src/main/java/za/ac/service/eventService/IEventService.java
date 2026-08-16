@@ -5,7 +5,7 @@ import za.ac.service.IService;
 import java.util.*;
 
 public interface IEventService extends IService<Event, String> {
-    Set<Event> getAll();
-    Set<Event> getUpcomingEvents();
-    Set<Event> getEventByChurchSite(String churchSiteId);
+    List<Event> getAll();
+    List<Event> getUpcomingEvents();
+    List<Event> getEventByChurchSite(String churchSiteId);
 }

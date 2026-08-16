@@ -2,8 +2,10 @@ package za.ac.repository;
 
 import za.ac.domain.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import java.time.LocalDate;
+import java.util.*;
 
-@Repository
 public interface IEventRepository extends JpaRepository<Event, String> {
+    List<Event> getEventByChurchSite(String churchSiteId);
+    List<Event> findByDateGreaterThan(LocalDate now);
 }

@@ -1,39 +1,67 @@
 package za.ac.service.rsvpService;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import za.ac.domain.Rsvp;
 import za.ac.domain.Sermon;
+import za.ac.repository.IRsvpRepository;
 import za.ac.service.sermonService.ISermon;
+
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public class RsvpServiceImpl implements ISermon {
+@Service
+public class RsvpServiceImpl implements IRsvp {
+    private final IRsvpRepository repository;
 
-    @Override
-    public Sermon create(Sermon sermon) {
-        return null;
+    @Autowired
+    public RsvpServiceImpl(IRsvpRepository repository) {
+        this.repository = repository;
     }
 
     @Override
-    public Sermon read(String s) {
-        return null;
+    public Rsvp create(Rsvp rsvp) {
+        return repository.save(rsvp);
     }
 
     @Override
-    public Sermon update(Sermon sermon) {
-        return null;
+    public Rsvp read(String rsvpId) {
+        return repository.findById(rsvpId).orElse(null);
     }
 
     @Override
-    public boolean delete(String s) {
+    public Rsvp update(Rsvp rsvp) {
+        return repository.save(rsvp);
+    }
+
+    @Override
+    public boolean delete(String rsvpId) {
+        if(repository.existsById(rsvpId)){
+            repository.deleteById(rsvpId);
+            return true;
+        }
         return false;
     }
 
     @Override
-    public Set<Sermon> getAll() {
-        return Set.of();
+    public List<Rsvp> getAll() {
+        return repository.findAll();
     }
 
     @Override
-    public Set<Sermon> getSermonsByLeader(String leaderId) {
-        return Set.of();
+    public List<Rsvp> getRsvpByEvent(String eventId) {
+        if(eventId == null){
+            return Collections.emptyList();
+        }
+        return repository.getRsvpByEvent(eventId);
+    }
+
+    @Override
+    public List<Rsvp> getRsvpByMember(String memberId) {
+        if(memberId == null){
+            return Collections.emptyList();
+        }
+        return repository.getRsvpByMember(memberId);
     }
 }

@@ -5,7 +5,10 @@ import org.springframework.stereotype.Service;
 import za.ac.domain.ContactDetails;
 import za.ac.repository.IContactDetailsRepository;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 @Service
 public class ContactDetailsServiceImpl implements IContactDetails{
 
@@ -15,27 +18,31 @@ public class ContactDetailsServiceImpl implements IContactDetails{
     public ContactDetailsServiceImpl(IContactDetailsRepository repository){ this.repository = repository;}
     @Override
     public ContactDetails create(ContactDetails contactDetails) {
-        return null;
+        return repository.save(contactDetails);
     }
 
     @Override
-    public ContactDetails read(String s) {
-        return null;
+    public ContactDetails read(String contactDetailsId) {
+        return repository.findById(contactDetailsId).orElse(null);
     }
 
     @Override
     public ContactDetails update(ContactDetails contactDetails) {
-        return null;
+        return repository.save(contactDetails);
     }
 
     @Override
-    public boolean delete(String s) {
+    public boolean delete(String contactDetailsId) {
+        if(repository.existsById(contactDetailsId)){
+            repository.deleteById(contactDetailsId);
+            return true;
+        }
         return false;
     }
 
     @Override
-    public List<String> getAll() {
-        return List.of();
+    public List<ContactDetails> getAll() {
+        return repository.findAll();
     }
 
 }

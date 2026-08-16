@@ -1,10 +1,20 @@
 package za.ac.service.outreachProgramService;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import za.ac.domain.OutreachProgram;
+import za.ac.repository.IOutreachProgramRepository;
 
-import java.util.Set;
+import java.util.*;
 
+@Service
 public class OutreachProgramServiceImpl implements IOutreachProgram {
+    private final IOutreachProgramRepository repository;
+
+    @Autowired
+    public OutreachProgramServiceImpl(IOutreachProgramRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     public OutreachProgram create(OutreachProgram outreachProgram) {
@@ -27,17 +37,23 @@ public class OutreachProgramServiceImpl implements IOutreachProgram {
     }
 
     @Override
-    public Set<OutreachProgram> getAll() {
-        return Set.of();
+    public List<OutreachProgram> getAll() {
+        return repository.findAll();
     }
 
     @Override
-    public Set<OutreachProgram> getProgramsByMember(String memberId) {
-        return Set.of();
+    public List<OutreachProgram> getProgramsByMember(String memberId) {
+        if(memberId == null){
+            return Collections.emptyList();
+        }
+        return repository.getProgramsByMember(memberId);
     }
 
     @Override
-    public Set<OutreachProgram> getProgramsByLeader(String leaderId) {
-        return Set.of();
+    public List<OutreachProgram> getProgramsByLeader(String leaderId) {
+        if(leaderId == null){
+            return Collections.emptyList();
+        }
+        return repository.getProgramsByLeader(leaderId);
     }
 }
