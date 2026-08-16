@@ -4,7 +4,6 @@ import za.ac.factory.AnnouncementFactory;
 import org.junit.jupiter.api.Test;
 import za.ac.domain.Announcement;
 import za.ac.domain.Enums.AnnouncementType;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class AnnouncementFactoryTest {

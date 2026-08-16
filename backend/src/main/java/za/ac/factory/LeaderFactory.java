@@ -5,7 +5,7 @@ import za.ac.domain.Leader;
 import za.ac.util.Helper;
 
 public class LeaderFactory {
-    public Leader createLeader(String leaderId, String name, String role, String bio, ContactDetails contact){
+    public static Leader createLeader(String leaderId, String name, String role, String bio, ContactDetails contact){
 
         if(Helper.isNullOrEmpty(leaderId) ||
         Helper.isNullOrEmpty(name) ||

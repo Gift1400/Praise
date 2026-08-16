@@ -5,8 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.domain.Announcement;
 import za.ac.service.announcementsService.AnnouncementServiceImpl;
-
-import java.util.Set;
+import java.util.*;
 
 @RestController
 @RequestMapping("api/announcement")
@@ -43,7 +42,7 @@ public class AnnouncementController {
     }
 
     @GetMapping("/getAll")
-    public Set<Announcement> getAll() {
+    public List<Announcement> getAll() {
         return announcementService.getAll();
     }
 

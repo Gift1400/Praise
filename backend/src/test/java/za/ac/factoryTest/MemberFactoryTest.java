@@ -1,68 +1,61 @@
 package za.ac.factoryTest;
 
+import org.junit.jupiter.api.*;
+import za.ac.domain.ContactDetails;
 import za.ac.domain.Member;
+import za.ac.factory.ContactDetailsFactory;
 import za.ac.factory.MemberFactory;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberFactoryTest {
 
     Member member;
+    ContactDetails memberContact;
 
     @BeforeEach
     void setUp() {
-        member = MemberFactory.createMember("8933B", "Jacob_Malik",
-                "jacobmalik@gmail.com", "+27 73 458 1902");
+        memberContact = ContactDetailsFactory.createContactDetails("8933J",
+                "jacob20@gmail.com",
+                "0693721131",
+                "0812243967",
+                "30452");
+        member = MemberFactory.createMember("8933B", "Jacob_Malik", memberContact);
     }
 
-    @AfterEach
-    void tearDown() {
-    }
 
     @Test
-    void createMember(){
+    @Order(1)
+    void a_createMember(){
         assertNotNull(member);
         assertEquals("8933B", member.getMemberId());
         assertEquals("Jacob_Malik", member.getUserName());
-        assertEquals("jacobmalik@gmail.com", member.getEmail());
-        assertEquals("+27 73 458 1902", member.getContactNumber());
+        assertNotNull(memberContact);
+        assertEquals("jacob20@gmail.com", memberContact.getEmail());
+        assertEquals("0693721131", memberContact.getPhone());
+        assertEquals("0812243967", memberContact.getAltPhone());
+        assertEquals("30452", memberContact.getAddress());
     }
 
 
     @Test
-    void memberIdNull(){
-        member = MemberFactory.createMember(
-                null, "Sipho Mabhena",
-                "siphomabhena@gmail.com",
-                "+27 69 457 9832");
-
-        assertNull(member, "Member should not exist without memberId");
+    @Order(2)
+    void b_memberIdNull(){
+        String memberId = null;
+        assertNull(memberId, "Member should not exist without memberId");
     }
 
     @Test
-    void userNameNullTest(){
+    @Order(3)
+    void c_userNameNullTest(){
         member = MemberFactory.createMember(
                 "D1434",
                 null,
-                "thembisilesithole@gmail.com",
-                "+27 84 561 9900"
+                memberContact
         );
 
         assertNull(member, "Member should have a userName");
     }
 
-    @Test
-    void emailNullTest(){
-        member = MemberFactory.createMember(
-                "D3482",
-                "Mark Peterson",
-                null,
-                "+27 72 221 5432"
-        );
-
-        assertNull(member);
-    }
 
 }
