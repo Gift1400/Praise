@@ -30,17 +30,16 @@ public class MemberController {
     }
 
     @DeleteMapping("/delete/{memberId}")
-    public ResponseEntity<String> delete(@PathVariable String memberId) {
-        boolean deleted = memberService.delete(memberId);
-        if (deleted) {
-            return ResponseEntity.ok("Deleted successfully");
+    public boolean delete(@PathVariable String memberId) {
+        if (memberService.delete(memberId)) {
+            return true;
         }
-        return ResponseEntity.badRequest().body("Member not found");
+        return false;
     }
 
     @GetMapping("/getAll")
     public List<Member> getAll() {
-        return memberService.getAllMembers();
+        return memberService.getAll();
     }
 
 }

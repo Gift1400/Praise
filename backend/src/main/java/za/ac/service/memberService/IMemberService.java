@@ -8,5 +8,5 @@ import java.util.Set;
 
 public interface IMemberService extends IService<Member, String> {
 
-    List<Member> getAllMembers();
+    List<Member> getAll();
 }
