@@ -27,7 +27,7 @@ A full-stack web application built to help churches manage their day-to-day oper
 | ORM | Spring Data JPA |
 | Security | Spring Security |
 | Build Tool | Maven |
-| Frontend | Coming soon |
+| Frontend | Vue.js |
 
 ## Project Structure
 
