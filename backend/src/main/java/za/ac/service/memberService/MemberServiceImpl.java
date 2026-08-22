@@ -42,7 +42,7 @@ public class MemberServiceImpl implements IMemberService {
     }
 
     @Override
-    public List<Member> getAllMembers() {
+    public List<Member> getAll() {
         return memberRepository.findAll();
     }
 }
