@@ -26,11 +26,12 @@
   padding: 1rem;
   filter: blur(2);
   min-height: 9vh;
+  z-index: 500;
 }
 
 #logo-container {
   align-self: center;
-  
+
 }
 
 #logo {
