@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
-import Events from "../views/Events.vue"
-import Announcements from "../views/Announcements.vue"
-import Contact from "../views/Contact.vue"
-import Sermons from "../views/Sermons.vue"
+import Events from "../views/Events.vue";
+import Announcements from "../views/Announcements.vue";
+import Contact from "../views/Contact.vue";
+import Sermons from "../views/Sermons.vue";
 
 const routes = [
   {
@@ -20,12 +20,12 @@ const routes = [
   {
     path: "/announcements",
     name: "announcements",
-    component: Announcements
+    component: Announcements,
   },
   {
     path: "/contacts",
     name: "contacts",
-    component: Contact
+    component: Contact,
   },
   {
     path: "/about",
@@ -36,7 +36,7 @@ const routes = [
     path: "/events",
     name: "events",
     component: Events,
-  }
+  },
 ];
 
 const router = createRouter({

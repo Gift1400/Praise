@@ -23,6 +23,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width:none;
 }
 
 .app-container {
@@ -36,5 +38,7 @@ body {
   background-color: #f9f9f9;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>

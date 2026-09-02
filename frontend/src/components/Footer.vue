@@ -30,7 +30,7 @@
   text-align: center;
   padding: 1rem;
   margin-top: auto;
-  height: 17vh;
+  height: 20vh;
 }
 
 #components {
