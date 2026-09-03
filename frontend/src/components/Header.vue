@@ -1,7 +1,7 @@
 <template>
   <header class="praiseHeader">
     <div id="logo-container">
-      <h1 id="logo">Praise</h1>
+      <h1 id="logo">Pra✝se</h1>
     </div>
     <nav class="navigation">
       <router-link class="link" to="/">Home</router-link>
@@ -25,7 +25,7 @@
   background: rgb(0 0 0 / 87%);
   color: white;
   backdrop-filter: blur(5px);
-  min-height: 10vh;
+  min-height: 11vh;
   z-index: 9;
   -webkit-backdrop-filter: blur(5px);
   animation: blur-header linear both;
@@ -51,15 +51,13 @@
 
 #logo {
   font-size: 1.5rem;
-  justify-content: left;
+  padding:0 0 0 2rem;
   color: white;
   z-index: 10;
 }
 
 .router-link-active {
-  border:0.1px solid white;
-  border-radius:2px;
-  background-color:rgba(0, 0, 255, 0.46);
+  backdrop-filter:blur(2px);
   
 }
 
@@ -75,7 +73,7 @@
     position:relative;
     color: white;
     font-size: 1rem;
-    text-decoration:none;
+    text-decoration: none;
   }
 
 }
@@ -83,13 +81,17 @@
 
 
 #login-signup {
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.589);
+  position:relative;
+  right:3rem;
+  border-radius: 20px;
+  background-color: #9b6d00;
   filter: blur(4);
-  color: black;
+  color: rgb(255, 254, 254);
   align-self: center;
   height: 30px;
-  width: 70px;
+  width: 6rem;
   border: none;
+  font-size:1rem;
+  font-weight:600;
 }
 </style>
