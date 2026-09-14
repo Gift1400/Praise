@@ -1,0 +1,274 @@
+/* =====================================
+   PRAISE CHURCH - LOGIN PAGE
+===================================== */
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================
+   LEFT IMAGE SECTION
+===================================== */
+
+.login-image {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1200&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.church-text {
+    color: white;
+    max-width: 500px;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.church-text h1 {
+    font-size: 52px;
+    margin: 0 0 20px;
+}
+
+.church-text p:last-child {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   LOGIN SECTION
+===================================== */
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: #ffffff;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 450px;
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.logo {
+    margin-bottom: 35px;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+
+.logo p {
+    margin: 3px 0;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #8a6d3b;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   HEADINGS
+===================================== */
+
+.login-box > h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.login-description {
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+
+/* =====================================
+   FORM
+===================================== */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    border: 1px solid #dddddd;
+
+    font-size: 15px;
+    font-family: inherit;
+
+    outline: none;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #b08d57;
+}
+
+
+/* =====================================
+   LOGIN OPTIONS
+===================================== */
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.remember-me input {
+    width: 15px;
+    height: 15px;
+}
+
+.login-options a {
+    color: #8a6d3b;
+    text-decoration: none;
+}
+
+.login-options a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   LOGIN BUTTON
+===================================== */
+
+.login-box button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    background: #222222;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.login-box button:hover {
+    background: #b08d57;
+}
+
+
+/* =====================================
+   REGISTER
+===================================== */
+
+.register-text {
+    text-align: center;
+    margin-top: 25px;
+
+    color: #666666;
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #8a6d3b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 800px) {
+
+    .login-page {
+        grid-template-columns: 1fr;
+    }
+
+    .login-image {
+        min-height: 300px;
+    }
+
+    .overlay {
+        min-height: 300px;
+    }
+
+    .church-text h1 {
+        font-size: 40px;
+    }
+
+    .login-section {
+        padding: 40px 25px;
+    }
+}
+.login-box button {
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto;
+    cursor: pointer;
+}

@@ -11,7 +11,7 @@
       <router-link id="link" to="/about">About</router-link>
       <router-link id="link" to="/contacts">Contact</router-link>
     </nav>
-    <button id="login-signup">Login</button>
+    <router-link class="login-signup" to="/login">login</router-link>
   </header>
 </template>
 
@@ -64,7 +64,7 @@
   text-decoration: dashed;
 }
 
-#login-signup {
+.login-signup {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.589);
   filter: blur(4);
