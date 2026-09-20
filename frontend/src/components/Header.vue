@@ -11,7 +11,7 @@
       <router-link class="link" to="/about">About</router-link>
       <router-link class="link" to="/contacts">Contact</router-link>
     </nav>
-    <button id="login-signup">Login</button>
+    <router-link class="login-signup" to="/sermons">Login</router-link>
   </header>
 </template>
 
@@ -31,7 +31,7 @@
   animation: blur-header linear both;
   animation-timeline: scroll(root);
   animation-range: 0px 200px;
-  font-family:'Arial Narrow Bold', sans-serif;
+  font-family: 'Arial Narrow Bold', sans-serif;
 }
 
 
@@ -51,14 +51,16 @@
 
 #logo {
   font-size: 1.5rem;
-  padding:0 0 0 2rem;
+  padding: 0 0 0 2rem;
   color: white;
   z-index: 10;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .router-link-active {
-  backdrop-filter:blur(2px);
-  
+  backdrop-filter: blur(2px);
+
 }
 
 .navigation {
@@ -70,7 +72,7 @@
   color: white;
 
   .link {
-    position:relative;
+    position: relative;
     color: white;
     font-size: 1rem;
     text-decoration: none;
@@ -80,9 +82,9 @@
 
 
 
-#login-signup {
-  position:relative;
-  right:3rem;
+.login-signup {
+  position: relative;
+  right: 3rem;
   border-radius: 20px;
   background-color: #9b6d00;
   filter: blur(4);
@@ -91,7 +93,7 @@
   height: 30px;
   width: 6rem;
   border: none;
-  font-size:1rem;
-  font-weight:600;
+  font-size: 1rem;
+  font-weight: 600;
 }
 </style>
