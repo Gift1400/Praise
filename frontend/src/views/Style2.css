@@ -1,274 +1,433 @@
-/* =====================================
-   PRAISE CHURCH - LOGIN PAGE
-===================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: #f7f5f0;
+}
 
 .login-page {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
 }
 
+/* =========================
+   LEFT WELCOME SECTION
+========================= */
 
-/* =====================================
-   LEFT IMAGE SECTION
-===================================== */
+.welcome-section {
+  width: 50%;
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      rgba(25, 20, 12, 0.65),
+      rgba(25, 20, 12, 0.75)
+    ),
+    linear-gradient(135deg, #8b6f47, #3d3021);
 
-.login-image {
-    min-height: 100vh;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
-        ),
-        url("https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1200&q=80");
-
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.overlay {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    text-align: center;
+.welcome-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  top: -180px;
+  left: -180px;
 }
 
-.church-text {
-    color: white;
-    max-width: 500px;
+.welcome-section::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  bottom: -300px;
+  right: -250px;
 }
 
-.small-title {
-    font-size: 13px;
-    letter-spacing: 4px;
-    font-weight: bold;
-    margin-bottom: 15px;
+.welcome-overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 70px;
+  max-width: 650px;
 }
 
-.church-text h1 {
-    font-size: 52px;
-    margin: 0 0 20px;
+/* Branding */
+
+.church-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 100px;
 }
 
-.church-text p:last-child {
-    font-size: 18px;
-    line-height: 1.7;
+.church-brand h1 {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 500;
+  margin: 0;
 }
 
+.cross-icon {
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
 
-/* =====================================
+/* Welcome text */
+
+.small-heading {
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  opacity: 0.8;
+}
+
+.welcome-content h2 {
+  font-family: Georgia, serif;
+  font-size: 54px;
+  line-height: 1.15;
+  font-weight: 400;
+  margin: 0 0 25px;
+}
+
+.welcome-content h2 span {
+  font-style: italic;
+}
+
+.welcome-content p:last-child {
+  max-width: 500px;
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+/* =========================
    LOGIN SECTION
-===================================== */
+========================= */
 
 .login-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    background: #ffffff;
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #faf9f6;
 }
 
-.login-box {
-    width: 100%;
-    max-width: 450px;
+.login-card {
+  width: 100%;
+  max-width: 450px;
 }
 
+/* Header */
 
-/* =====================================
-   LOGO
-===================================== */
-
-.logo {
-    margin-bottom: 35px;
+.login-header {
+  margin-bottom: 35px;
 }
 
-.logo h2 {
-    margin: 0;
-    font-size: 34px;
-    letter-spacing: 3px;
+.login-header h1 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #2f281f;
+  margin: 0 0 10px;
 }
 
-.logo p {
-    margin: 3px 0;
-    font-size: 11px;
-    letter-spacing: 5px;
-    color: #8a6d3b;
-    font-weight: bold;
+.login-header p {
+  color: #77716a;
+  font-size: 14px;
+  margin: 0;
 }
 
+/* Mobile logo */
 
-/* =====================================
-   HEADINGS
-===================================== */
-
-.login-box > h1 {
-    font-size: 38px;
-    margin-bottom: 12px;
+.mobile-logo {
+  display: none;
 }
 
-.login-description {
-    color: #666666;
-    line-height: 1.6;
-    margin-bottom: 35px;
-}
-
-
-/* =====================================
-   FORM
-===================================== */
+/* Form */
 
 .form-group {
-    margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3d372f;
+  margin-bottom: 9px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  font-size: 16px;
+  opacity: 0.55;
+  z-index: 2;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #ddd8cf;
+  border-radius: 9px;
+  padding: 0 16px 0 46px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+  transition: 0.2s ease;
+}
+
+.input-wrapper input:focus {
+  border-color: #8b6f47;
+  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1);
+}
+
+.input-wrapper input::placeholder {
+  color: #aaa39b;
+}
+
+/* Password */
+
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-label a {
+  font-size: 12px;
+  color: #80633e;
+  text-decoration: none;
+}
+
+.password-label a:hover {
+  text-decoration: underline;
+}
+
+.show-password {
+  position: absolute;
+  right: 14px;
+  border: none;
+  background: none;
+  color: #80633e;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-wrapper:has(.show-password) input {
+  padding-right: 60px;
+}
+
+/* Remember */
+
+.remember-row {
+  margin: 5px 0 25px;
+}
+
+.remember {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 400 !important;
+}
+
+.remember input {
+  width: 15px;
+  height: 15px;
+  accent-color: #80633e;
+}
+
+/* Login button */
+
+.login-button {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 9px;
+  background: #80633e;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.login-button:hover {
+  background: #674e31;
+  transform: translateY(-1px);
+}
+
+/* Signup */
+
+.signup-section {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.signup-section p {
+  color: #77716a;
+  font-size: 13px;
+}
+
+.signup-section a {
+  color: #80633e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-section a:hover {
+  text-decoration: underline;
+}
+
+/* Divider */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 27px 0 18px;
+  color: #b0aaa3;
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e4e0da;
+}
+
+/* Guest */
+
+.guest-text {
+  text-align: center;
+  color: #99938c;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Home */
+
+.home-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #80633e;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 850px) {
+
+  .login-page {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 14px;
-}
+  }
 
-.form-group input[type="email"],
-.form-group input[type="password"] {
+  .welcome-section {
+    display: none;
+  }
+
+  .login-section {
     width: 100%;
-    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30px 22px;
+  }
 
-    padding: 15px;
+  .login-card {
+    max-width: 450px;
+  }
 
-    border: 1px solid #dddddd;
-
-    font-size: 15px;
-    font-family: inherit;
-
-    outline: none;
-}
-
-.form-group input[type="email"]:focus,
-.form-group input[type="password"]:focus {
-    border-color: #b08d57;
-}
-
-
-/* =====================================
-   LOGIN OPTIONS
-===================================== */
-
-.login-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-bottom: 25px;
-
-    font-size: 14px;
-}
-
-.remember-me {
+  .mobile-logo {
     display: flex;
     align-items: center;
-    gap: 7px;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 45px;
+  }
+
+  .mobile-logo .cross-icon {
+    width: 40px;
+    height: 40px;
+    border-color: #80633e;
+    color: #80633e;
+  }
+
+  .mobile-logo h2 {
+    font-family: Georgia, serif;
+    color: #2f281f;
+    font-weight: 500;
+  }
 }
 
-.remember-me input {
-    width: 15px;
-    height: 15px;
+@media (max-width: 450px) {
+
+  .login-section {
+    padding: 25px 18px;
+  }
+
+  .login-header h1 {
+    font-size: 32px;
+  }
+
+  .login-header {
+    margin-bottom: 28px;
+  }
+
+  .input-wrapper input,
+  .login-button {
+    height: 50px;
+  }
+  .signup-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
 }
 
-.login-options a {
-    color: #8a6d3b;
-    text-decoration: none;
+.signup-text a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-.login-options a:hover {
-    text-decoration: underline;
+.signup-text a:hover {
+  color: #555;
 }
-
-
-/* =====================================
-   LOGIN BUTTON
-===================================== */
-
-.login-box button {
-    width: 100%;
-
-    padding: 15px;
-
-    border: none;
-
-    background: #222222;
-    color: white;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
-}
-
-.login-box button:hover {
-    background: #b08d57;
-}
-
-
-/* =====================================
-   REGISTER
-===================================== */
-
-.register-text {
-    text-align: center;
-    margin-top: 25px;
-
-    color: #666666;
-    font-size: 14px;
-}
-
-.register-text a {
-    color: #8a6d3b;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.register-text a:hover {
-    text-decoration: underline;
-}
-
-
-/* =====================================
-   MOBILE RESPONSIVE
-===================================== */
-
-@media (max-width: 800px) {
-
-    .login-page {
-        grid-template-columns: 1fr;
-    }
-
-    .login-image {
-        min-height: 300px;
-    }
-
-    .overlay {
-        min-height: 300px;
-    }
-
-    .church-text h1 {
-        font-size: 40px;
-    }
-
-    .login-section {
-        padding: 40px 25px;
-    }
-}
-.login-box button {
-    position: relative;
-    z-index: 9999;
-    pointer-events: auto;
-    cursor: pointer;
 }
