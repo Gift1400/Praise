@@ -1,32 +1,47 @@
 <template>
   <header class="praiseHeader">
     <div id="logo-container">
-      <h1 id="logo">Praise</h1>
+      <h1 id="logo">Pra✝se</h1>
     </div>
-    <nav id="navigation">
-      <router-link id="link" to="/">Home</router-link>
-      <router-link id="link" to="/sermons">Sermon</router-link>
-      <router-link id="link" to="/events">Events</router-link>
-      <router-link id="link" to="/announcements">Announcements</router-link>
-      <router-link id="link" to="/about">About</router-link>
-      <router-link id="link" to="/contacts">Contact</router-link>
+    <nav class="navigation">
+      <router-link class="link" to="/">Home</router-link>
+      <router-link class="link" to="/sermons">Sermon</router-link>
+      <router-link class="link" to="/events">Events</router-link>
+      <router-link class="link" to="/announcements">Announcements</router-link>
+      <router-link class="link" to="/about">About</router-link>
+      <router-link class="link" to="/contacts">Contact</router-link>
     </nav>
-    <button id="login-signup">Login</button>
+    <router-link class="login-signup" to="/sermons">Login</router-link>
   </header>
 </template>
 
 <style scoped>
 .praiseHeader {
   position: sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  background: #000000c0;
+  justify-content: space-between;
+  background: rgb(0 0 0 / 87%);
   color: white;
-  padding: 1rem;
-  filter: blur(2);
-  min-height: 9vh;
-  z-index: 500;
+  backdrop-filter: blur(5px);
+  min-height: 11vh;
+  z-index: 9;
+  -webkit-backdrop-filter: blur(5px);
+  animation: blur-header linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0px 200px;
+  font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+
+@keyframes blur-header {
+  to {
+    background-color: rgb(0 0 0 / 50%);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  }
 }
 
 #logo-container {
@@ -36,15 +51,19 @@
 
 #logo {
   font-size: 1.5rem;
-  align-self: center;
+  padding: 0 0 0 2rem;
+  color: white;
+  z-index: 10;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .router-link-active {
-  font-weight: bold;
-  text-decoration: underline;
+  backdrop-filter: blur(2px);
+
 }
 
-#navigation {
+.navigation {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -52,26 +71,29 @@
   align-self: center;
   color: white;
 
+  .link {
+    position: relative;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
 }
 
-#link {
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-}
 
-#link-active {
-  text-decoration: dashed;
-}
 
-#login-signup {
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.589);
+.login-signup {
+  position: relative;
+  right: 3rem;
+  border-radius: 20px;
+  background-color: #9b6d00;
   filter: blur(4);
-  color: black;
+  color: rgb(255, 254, 254);
   align-self: center;
   height: 30px;
-  width: 70px;
+  width: 6rem;
   border: none;
+  font-size: 1rem;
+  font-weight: 600;
 }
 </style>

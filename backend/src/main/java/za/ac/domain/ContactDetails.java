@@ -1,9 +1,10 @@
 package za.ac.domain;
 import jakarta.persistence.*;
 
-@Embeddable
+@Entity
 public class ContactDetails {
     @Id
+    @Column(name = "contactDetailsId")
     private String contactDetailsId;
     private String email;
     private String phone;

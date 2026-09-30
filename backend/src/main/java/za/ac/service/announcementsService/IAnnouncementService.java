@@ -9,5 +9,5 @@ public interface IAnnouncementService extends IService<Announcement, String> {
 
     List<Announcement> getAll();
     List<Announcement> getByType(AnnouncementType announcementType);
-    List<Announcement> getByChurchSite(String churchSiteId);
+    List<Announcement> getByChurchSiteId(String churchSiteId);
 }

@@ -2,13 +2,15 @@ package za.ac.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import za.ac.domain.Announcement;
+import za.ac.domain.Enums.AnnouncementType;
 import za.ac.service.announcementsService.AnnouncementServiceImpl;
 import java.util.*;
 
 @RestController
-@RequestMapping("api/announcement")
+@RequestMapping("api/announcements")
 public class AnnouncementController {
 
     public final AnnouncementServiceImpl announcementService;
@@ -39,6 +41,16 @@ public class AnnouncementController {
             return true;
         }
         return false;
+    }
+
+    @GetMapping("/getByType/{type}")
+    public ResponseEntity<List<Announcement>> getByType(@PathVariable AnnouncementType type) {
+        return ResponseEntity.ok(announcementService.getByType(type));
+    }
+
+    @GetMapping("/getByChurchSite/{churchSiteId}")
+    public ResponseEntity<List<Announcement>> getByChurchSite(@PathVariable String churchSiteId) {
+        return ResponseEntity.ok(announcementService.getByChurchSiteId(churchSiteId));
     }
 
     @GetMapping("/getAll")

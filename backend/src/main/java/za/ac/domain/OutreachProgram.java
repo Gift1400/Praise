@@ -2,13 +2,28 @@ package za.ac.domain;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name="outreachProgram")
 public class OutreachProgram {
     @Id
+    @Column(name = "outreachProgramId")
     private String programId;
     private String programName;
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "leaderId")
+    private Leader leader;
+
+    @ManyToMany
+    @JoinTable(
+            name = "member_outreach_program",
+            joinColumns = @JoinColumn(name = "programId"),
+            inverseJoinColumns = @JoinColumn(name = "memberId")
+    )
+    private List<Member> members;
 
     protected OutreachProgram(){}
 

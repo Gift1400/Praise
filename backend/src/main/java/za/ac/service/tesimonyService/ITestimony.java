@@ -1,6 +1,5 @@
 package za.ac.service.tesimonyService;
 
-import jakarta.persistence.SecondaryTable;
 import za.ac.domain.Testimony;
 import za.ac.service.IService;
 import java.util.*;

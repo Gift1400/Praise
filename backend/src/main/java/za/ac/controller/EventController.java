@@ -1,15 +1,23 @@
 package za.ac.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import za.ac.domain.Event;
 import za.ac.service.eventService.EventServiceImpl;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("api/event")
+@RequestMapping("api/events")
 public class EventController {
 
-    private EventServiceImpl eventService;
+    private final EventServiceImpl eventService;
+
+    @Autowired
+    public EventController(EventServiceImpl eventService) {
+        this.eventService = eventService;
+    }
 
     @PostMapping("/create")
     public Event create(@RequestBody Event event) {
@@ -29,5 +37,20 @@ public class EventController {
     @DeleteMapping("/delete/{eventId}")
     public boolean delete(@PathVariable String eventId){
         return eventService.delete(eventId);
+    }
+
+    @GetMapping("/getAll")
+    public ResponseEntity<List<Event>> getAll() {
+        return ResponseEntity.ok(eventService.getAll());
+    }
+
+    @GetMapping("/upcoming")
+    public ResponseEntity<List<Event>> getUpcoming() {
+        return ResponseEntity.ok(eventService.getUpcomingEvents());
+    }
+
+    @GetMapping("/getByChurchSite/{churchSiteId}")
+    public ResponseEntity<List<Event>> getByChurchSite(@PathVariable String churchSiteId) {
+        return ResponseEntity.ok(eventService.getEventByChurchSite(churchSiteId));
     }
 }

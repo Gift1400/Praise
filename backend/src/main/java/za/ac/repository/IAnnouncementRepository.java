@@ -9,5 +9,5 @@ import java.util.Set;
 
 public interface IAnnouncementRepository extends JpaRepository<Announcement, String> {
     List<Announcement> getByType(AnnouncementType announcementType);
-    List<Announcement> getByChurchSite(String churchSiteId);
+    List<Announcement> getByChurchSiteId(String churchSiteId);
 }

@@ -55,11 +55,11 @@ public class AnnouncementServiceImpl implements IAnnouncementService {
     }
 
     @Override
-    public List<Announcement> getByChurchSite(String churchSiteId) {
+    public List<Announcement> getByChurchSiteId(String churchSiteId) {
         if(churchSiteId == null){
             return Collections.emptyList();
         }
-        return repository.getByChurchSite(churchSiteId);
+        return repository.getByChurchSiteId(churchSiteId);
     }
 
 }

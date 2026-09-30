@@ -8,10 +8,15 @@ import java.time.LocalDate;
 @Table(name = "Sermon")
 public class Sermon {
     @Id
+    @Column(name = "sermonId")
     private String sermonId;
     private String title;
     private String description;
     private LocalDate date;
+
+    @ManyToOne
+    @JoinColumn(name = "leaderId")
+    private Leader leader;
 
     protected Sermon(){}
 
@@ -41,10 +46,11 @@ public class Sermon {
         private String description;
         private LocalDate date;
 
-        public Builder copy(Sermon sermon){
+        public Builder copy(Sermon sermon) {
             this.sermonId = sermon.sermonId;
             this.title = sermon.title;
             this.description = sermon.description;
+            this.date = sermon.date;
             return this;
         }
 

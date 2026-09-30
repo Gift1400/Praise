@@ -18,21 +18,25 @@ public class OutreachProgramServiceImpl implements IOutreachProgram {
 
     @Override
     public OutreachProgram create(OutreachProgram outreachProgram) {
-        return null;
+        return repository.save(outreachProgram);
     }
 
     @Override
-    public OutreachProgram read(String s) {
-        return null;
+    public OutreachProgram read(String programId) {
+        return repository.findById(programId).orElse(null);
     }
 
     @Override
     public OutreachProgram update(OutreachProgram outreachProgram) {
-        return null;
+        return repository.save(outreachProgram);
     }
 
     @Override
-    public boolean delete(String s) {
+    public boolean delete(String programId) {
+        if (repository.existsById(programId)) {
+            repository.deleteById(programId);
+            return true;
+        }
         return false;
     }
 
