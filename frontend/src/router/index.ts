@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
-import Events from "../views/Events.vue";
-import Announcements from "../views/Announcements.vue";
-import Contact from "../views/Contact.vue";
-import Sermons from "../views/Sermons.vue";
+import Events from "../views/Events.vue"
+import Announcements from "../views/Announcements.vue"
+import Contact from "../views/Contact.vue"
+import Sermons from "../views/Sermons.vue"
+import Login from "../views/Login.vue";
+import Signup from "../views/Signup.vue";
 
 const routes = [
   {
@@ -12,6 +14,16 @@ const routes = [
     name: "home",
     component: Home,
   },
+  {
+  path: "/login",
+  name: "login",
+  component: Login,
+},
+{
+  path: "/signup",
+  name: "signup",
+  component: Signup,
+},
   {
     path: "/sermons",
     name: "sermons",

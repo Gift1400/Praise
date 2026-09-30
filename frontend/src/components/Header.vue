@@ -11,7 +11,7 @@
       <router-link class="link" to="/about">About</router-link>
       <router-link class="link" to="/contacts">Contact</router-link>
     </nav>
-    <router-link class="login-signup" to="/sermons">Login</router-link>
+    <router-link class="login-signup" to="/login">login</router-link>
   </header>
 </template>
 
