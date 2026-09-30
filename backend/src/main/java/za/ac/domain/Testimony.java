@@ -8,9 +8,14 @@ import java.time.LocalDate;
 @Table(name = "testimony")
 public class Testimony {
     @Id
+    @Column(name = "testimonyId")
     private String testimonyId;
     private String content;
     private LocalDate date;
+
+    @ManyToOne
+    @JoinColumn(name = "memberId")
+    private Member member;
 
     protected Testimony(){}
 

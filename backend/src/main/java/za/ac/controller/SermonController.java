@@ -1,6 +1,7 @@
 package za.ac.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import za.ac.domain.Sermon;
 import za.ac.service.sermonService.SermonServiceImpl;
@@ -8,7 +9,7 @@ import za.ac.service.sermonService.SermonServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("/sermon")
+@RequestMapping("api/sermon")
 public class SermonController {
     private final SermonServiceImpl sermonService;
 
@@ -44,4 +45,10 @@ public class SermonController {
     public List<Sermon> getAll(){
         return sermonService.getAll();
     }
+
+    @GetMapping("/getByLeader/{leaderId}")
+    public ResponseEntity<List<Sermon>> getByLeader(@PathVariable String leaderId) {
+        return ResponseEntity.ok(sermonService.getSermonsByLeader(leaderId));
+    }
+
 }

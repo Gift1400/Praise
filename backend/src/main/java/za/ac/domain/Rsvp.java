@@ -6,8 +6,17 @@ import jakarta.persistence.*;
 @Table(name = "rsvp")
 public class Rsvp {
     @Id
+    @Column(name = "rsvpId")
     private String rsvpId;
     private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "memberId")
+    private Member member;
+
+    @ManyToOne
+    @JoinColumn(name = "eventId")
+    private Event event;
 
     protected Rsvp(){}
 

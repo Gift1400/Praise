@@ -4,9 +4,9 @@ import za.ac.domain.ContactDetails;
 import za.ac.util.Helper;
 
 public class ContactDetailsFactory {
-    public static ContactDetails createContactDetails(String contactId, String email, String phone, String altPhone, String address){
+    public static ContactDetails createContactDetails(String contactDetailsId, String email, String phone, String altPhone, String address){
 
-        if(Helper.isNullOrEmpty(contactId) ||
+        if(Helper.isNullOrEmpty(contactDetailsId) ||
         Helper.isNullOrEmpty(email) ||
         Helper.isNullOrEmpty(address)){
             return null;
@@ -18,7 +18,7 @@ public class ContactDetailsFactory {
         }
 
         return new ContactDetails.Builder()
-                .setContactDetailsId(contactId)
+                .setContactDetailsId(contactDetailsId)
                 .setEmail(email)
                 .setPhone(phone)
                 .setAltPhone(altPhone)

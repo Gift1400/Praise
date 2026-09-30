@@ -1,18 +1,19 @@
 package za.ac.domain;
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "leader")
 public class Leader {
     @Id
+    @Column(name = "leaderId")
     private String leaderId;
     private String name;
     private String role;
     private String bio;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "contactDetailsId")
     private ContactDetails contactDetails;
 
     protected Leader(){

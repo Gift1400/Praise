@@ -9,7 +9,7 @@ import za.ac.domain.Member;
 import java.util.List;
 
 @RestController
-@RequestMapping("/outreachProgram")
+@RequestMapping("api/outreachProgram")
 public class OutreachProgramController {
     private final OutreachProgramServiceImpl outreachProgramService;
 

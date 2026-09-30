@@ -28,11 +28,15 @@ public class PrayerRequestServiceImpl implements IPrayerRequest{
 
     @Override
     public PrayerRequest update(PrayerRequest prayerRequest) {
-        return null;
+        return repository.save(prayerRequest);
     }
 
     @Override
-    public boolean delete(String s) {
+    public boolean delete(String requestId) {
+        if (repository.existsById(requestId)) {
+            repository.deleteById(requestId);
+            return true;
+        }
         return false;
     }
 

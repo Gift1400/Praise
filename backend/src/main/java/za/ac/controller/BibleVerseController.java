@@ -4,12 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import za.ac.domain.BibleVerse;
+import za.ac.domain.Enums.LifeSituation;
 import za.ac.service.bibleVerseService.BibleVerseServiceImpl;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/bibleVerse")
+@RequestMapping("api/bibleVerse")
 public class BibleVerseController {
 
     public final BibleVerseServiceImpl bibleVerseService;
@@ -40,6 +41,11 @@ public class BibleVerseController {
             return true;
         }
         return false;
+    }
+
+    @GetMapping("/getBySituation/{situation}")
+    public ResponseEntity<List<BibleVerse>> getBySituation(@PathVariable LifeSituation situation) {
+        return ResponseEntity.ok(bibleVerseService.getVerseBySituation(situation));
     }
 
     @GetMapping("/getAll")
