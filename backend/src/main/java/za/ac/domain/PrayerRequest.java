@@ -7,10 +7,15 @@ import java.time.LocalDate;
 @Table(name = "prayerRequest")
 public class PrayerRequest {
     @Id
+    @Column(name = "prayerRequestId")
     private String requestId;
     private String content;
     private boolean isPrivate;
     private LocalDate date;
+
+    @ManyToOne
+    @JoinColumn(name = "memberId")
+    private Member member;
 
     protected PrayerRequest(){}
 

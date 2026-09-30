@@ -32,12 +32,12 @@ const routes = [
   {
     path: "/announcements",
     name: "announcements",
-    component: Announcements
+    component: Announcements,
   },
   {
     path: "/contacts",
     name: "contacts",
-    component: Contact
+    component: Contact,
   },
   {
     path: "/about",
@@ -48,7 +48,7 @@ const routes = [
     path: "/events",
     name: "events",
     component: Events,
-  }
+  },
 ];
 
 const router = createRouter({

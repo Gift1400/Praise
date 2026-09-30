@@ -13,7 +13,7 @@ public class ChurchSiteFactory {
         }
 
         return new ChurchSite.Builder()
-                .setSiteId(churchSiteId)
+                .setChurchSiteId(churchSiteId)
                 .setChurchName(churchName)
                 .setContactDetails(contactDetails)
                 .build();

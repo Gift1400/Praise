@@ -7,12 +7,17 @@ import java.time.LocalDate;
 @Entity
 public class Attendance {
     @Id
-    @GeneratedValue
+    @Column(name = "attendanceId")
     private String attendanceId;
 
     private LocalDate date;
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "memberId")
     private Member member;
+
+    @ManyToOne
+    @JoinColumn(name = "eventId")
+    private Event event;
 
     protected Attendance(){};
 

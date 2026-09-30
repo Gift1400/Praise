@@ -9,12 +9,17 @@ import java.util.Objects;
 @Table(name = "donations")
 public class Donation {
     @Id
+    @Column(name = "donationId")
     private int donation_id;
     private double amount;
     private LocalDate donation_date;
-    private String donation_type; // e.g. Cash// , Online
+    private String donation_type;
     private String donor_name;
     private String recipient_organization;
+
+    @ManyToOne
+    @JoinColumn(name = "memberId")
+    private Member member;
 
     private Donation(Builder builder) {
         this.donation_id = builder.donation_id;

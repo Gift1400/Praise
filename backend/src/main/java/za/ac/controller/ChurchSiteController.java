@@ -9,7 +9,7 @@ import za.ac.service.churchSiteService.ChurchSiteServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("/churchSite")
+@RequestMapping("api/churchSite")
 public class ChurchSiteController {
 
     private final ChurchSiteServiceImpl churchSiteService;

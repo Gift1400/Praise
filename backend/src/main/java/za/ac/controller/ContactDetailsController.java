@@ -8,7 +8,7 @@ import za.ac.service.contactDetailsService.ContactDetailsServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("/contactDetails")
+@RequestMapping("api/contactDetails")
 public class ContactDetailsController {
 
     private final ContactDetailsServiceImpl contactDetailsService;
@@ -33,7 +33,7 @@ public class ContactDetailsController {
         return contactDetailsService.update(contactDetails);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{contactDetailsId}")
     public boolean delete(@PathVariable String contactDetailsId){
         if(contactDetailsService.delete(contactDetailsId)){
             return true;

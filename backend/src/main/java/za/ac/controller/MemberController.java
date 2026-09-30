@@ -12,7 +12,12 @@ import java.util.List;
 @RequestMapping("api/member")
 public class MemberController {
 
-    private MemberServiceImpl memberService;
+    private final MemberServiceImpl memberService;
+
+    @Autowired
+    public MemberController(MemberServiceImpl memberService) {
+        this.memberService = memberService;
+    }
 
     @PostMapping("/create")
     public Member create(@RequestBody Member student) {
@@ -24,7 +29,7 @@ public class MemberController {
         return memberService.read(memberId);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Member update(@RequestBody Member member) {
         return memberService.update(member);
     }

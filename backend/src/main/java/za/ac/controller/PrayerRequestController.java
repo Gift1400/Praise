@@ -1,6 +1,7 @@
 package za.ac.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import za.ac.domain.PrayerRequest;
 import za.ac.service.prayerRequestService.PrayerRequestServiceImpl;
@@ -8,7 +9,7 @@ import za.ac.service.prayerRequestService.PrayerRequestServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("/prayerRequest")
+@RequestMapping("api/prayerRequest")
 public class PrayerRequestController {
     private final PrayerRequestServiceImpl prayerRequestService;
 
@@ -43,5 +44,15 @@ public class PrayerRequestController {
     @GetMapping("/getAll")
     public List<PrayerRequest> getAll(){
         return prayerRequestService.getAll();
+    }
+
+    @GetMapping("/getPublic")
+    public ResponseEntity<List<PrayerRequest>> getPublic() {
+        return ResponseEntity.ok(prayerRequestService.getPublicPrayerRequest());
+    }
+
+    @GetMapping("/getByMember/{memberId}")
+    public ResponseEntity<List<PrayerRequest>> getByMember(@PathVariable String memberId) {
+        return ResponseEntity.ok(prayerRequestService.getPrayerRequestByMember(memberId));
     }
 }

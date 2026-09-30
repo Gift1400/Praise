@@ -7,7 +7,7 @@ import za.ac.service.leaderService.LeaderServiceImpl;
 import java.util.*;
 
 @RestController
-@RequestMapping("/leader")
+@RequestMapping("api/leader")
 public class LeaderController {
     private final LeaderServiceImpl leaderService;
 

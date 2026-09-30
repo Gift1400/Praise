@@ -10,6 +10,7 @@ import java.time.LocalDate;
 public class Event {
 
     @Id
+    @Column(name = "eventId")
     private String eventId;
     private String title;
     private String description;
@@ -17,6 +18,10 @@ public class Event {
     private String time;
     private String location;
     private int expectedAttendees;
+
+    @ManyToOne
+    @JoinColumn(name = "churchSiteId")
+    private ChurchSite churchSite;
 
     protected Event(){}
 

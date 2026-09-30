@@ -8,7 +8,7 @@ import za.ac.service.tesimonyService.TestimonyServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("/testimony")
+@RequestMapping("api/testimony")
 public class TestimonyController {
     private final TestimonyServiceImpl testimonyService;
 

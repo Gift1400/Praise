@@ -1,6 +1,7 @@
 package za.ac.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import za.ac.domain.Rsvp;
 import za.ac.service.rsvpService.RsvpServiceImpl;
@@ -8,7 +9,7 @@ import za.ac.service.rsvpService.RsvpServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("/rsvp")
+@RequestMapping("api/rsvp")
 public class RsvpController {
     private final RsvpServiceImpl rsvpService;
 
@@ -43,5 +44,15 @@ public class RsvpController {
     @GetMapping("/getAll")
     public List<Rsvp> getAll(){
         return rsvpService.getAll();
+    }
+
+    @GetMapping("/getByEvent/{eventId}")
+    public ResponseEntity<List<Rsvp>> getByEvent(@PathVariable String eventId) {
+        return ResponseEntity.ok(rsvpService.getRsvpByEvent(eventId));
+    }
+
+    @GetMapping("/getByMember/{memberId}")
+    public ResponseEntity<List<Rsvp>> getByMember(@PathVariable String memberId) {
+        return ResponseEntity.ok(rsvpService.getRsvpByMember(memberId));
     }
 }
