@@ -13,18 +13,11 @@ body {
   display: flex;
 }
 
-/* =========================
-   LEFT WELCOME SECTION
-========================= */
-
 .welcome-section {
   width: 50%;
   min-height: 100vh;
   background:
-    linear-gradient(
-      rgba(25, 20, 12, 0.65),
-      rgba(25, 20, 12, 0.75)
-    ),
+    linear-gradient(rgba(25, 20, 12, 0.65), rgba(25, 20, 12, 0.75)),
     linear-gradient(135deg, #8b6f47, #3d3021);
 
   display: flex;
@@ -355,7 +348,6 @@ body {
 ========================= */
 
 @media (max-width: 850px) {
-
   .login-page {
     display: block;
   }
@@ -397,7 +389,6 @@ body {
 }
 
 @media (max-width: 450px) {
-
   .login-section {
     padding: 25px 18px;
   }
@@ -415,19 +406,19 @@ body {
     height: 50px;
   }
   .signup-text {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #555;
-}
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+  }
 
-.signup-text a {
-  color: #000;
-  font-weight: bold;
-  text-decoration: underline;
-}
+  .signup-text a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
-.signup-text a:hover {
-  color: #555;
-}
+  .signup-text a:hover {
+    color: #555;
+  }
 }

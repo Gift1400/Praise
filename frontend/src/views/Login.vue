@@ -167,4 +167,4 @@ export default {
 };
 </script>
 
-<style src="./Style2.css"></style>
+<style src="../styles/login.css"></style>

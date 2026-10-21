@@ -153,6 +153,6 @@
   </div>
 </template>
 
-<script>
-import "./Style1.css";
-</script>
+<style>
+@import "../styles/contact.css";
+</style>
