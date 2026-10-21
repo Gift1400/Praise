@@ -17,32 +17,34 @@ import Footer from './components/Footer.vue'
 </template>
 
 <style>
+ 
 *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
 html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
-  scrollbar-width:none;
+  scrollbar-width: none;
+  background-color: #f9f9f9;
 }
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
+ 
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  width: 100dvw;
+  width: 100%;
 }
 
+ 
 .main-content {
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-  width: 100dvw;
-  height: 100%;
+  flex: 1; 
+  width: 100%;
 }
 </style>
