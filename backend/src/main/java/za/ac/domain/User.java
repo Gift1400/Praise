@@ -3,13 +3,15 @@ package za.ac.domain;
 import jakarta.persistence.*;
 import java.util.Objects;
 import za.ac.domain.Enums.Roles;
+import java.util.*;
 
 @Entity
 @Table(name = "users")
 public class User {
     @Id
+    @GeneratedValue(strategy= GenerationType.UUID)
     @Column(name = "user_id")
-    private String userId;
+    private UUID userId;
 
     @Column(unique = true, nullable = false)
     private String email;
@@ -35,7 +37,7 @@ public class User {
         this.lastName = builder.lastName;
     }
 
-    public String getUserId() {
+    public UUID getUserId() {
         return userId;
     }
 
@@ -85,14 +87,14 @@ public class User {
     }
 
     public static class Builder {
-        private String userId;
+        private UUID userId;
         private String email;
         private String password;
         private Roles role;
         private String firstName;
         private String lastName;
 
-        public Builder setUserId(String userId) {
+        public Builder setUserId(UUID userId) {
             this.userId = userId;
             return this;
         }
