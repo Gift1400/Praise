@@ -7,14 +7,14 @@ import java.time.LocalDate;
 @Table(name = "prayerRequest")
 public class PrayerRequest {
     @Id
-    @Column(name = "prayerRequestId")
+    @Column(name = "prayer_request_id")
     private String requestId;
     private String content;
     private boolean isPrivate;
     private LocalDate date;
 
     @ManyToOne
-    @JoinColumn(name = "memberId")
+    @JoinColumn(name = "member_id")
     private Member member;
 
     protected PrayerRequest(){}
@@ -24,19 +24,22 @@ public class PrayerRequest {
         this.content = builder.content;
         this.isPrivate = builder.isPrivate;
         this.date = builder.date;
+        this.member = builder.member;
     }
 
     public String getRequestId(){ return requestId;}
     public String getContent(){ return content; }
     public Boolean getIsPrivate(){ return isPrivate; }
     public LocalDate getDate(){ return date;}
+    public Member getMember(){ return member;}
 
     public String toString(){
         return "Prayer Request{ " + "\n" +
                 "Request Id: " + requestId + "\n" +
                 "Content: " + content + "\n" +
                 "isPrivate: " + isPrivate + "\n" +
-                "Date: " + date + "}";
+                "Date: " + date + "\n" +
+                "Member: " + member + "}";
     }
 
     public static class Builder{
@@ -44,12 +47,14 @@ public class PrayerRequest {
         private String content;
         private boolean isPrivate;
         private LocalDate date;
+        private Member member;
 
         public Builder copy(PrayerRequest prayerRequest){
             this.requestId = prayerRequest.requestId;
             this.content = prayerRequest.content;
             this.isPrivate = prayerRequest.isPrivate;
             this.date = prayerRequest.date;
+            this.member = prayerRequest.member;
             return this;
         }
 
@@ -67,6 +72,10 @@ public class PrayerRequest {
         }
         public Builder setLocalDate(LocalDate date){
             this.date = date;
+            return this;
+        }
+        public Builder setMember(Member member){
+            this.member = member;
             return this;
         }
 

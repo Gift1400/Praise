@@ -9,12 +9,12 @@ import za.ac.domain.ContactDetails;
 @Table(name = "members")
 public class Member {
     @Id
-    @Column(name = "memberId")
+    @Column(name = "member_id")
     private String memberId;
     private String userName;
 
     @OneToOne (fetch = FetchType.LAZY)
-    @JoinColumn(name = "contactDetailsId")
+    @JoinColumn(name = "contact_details_id")
     private ContactDetails contactDetails;
 
     @OneToMany(mappedBy = "member")

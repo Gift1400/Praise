@@ -8,41 +8,48 @@ import java.time.LocalDate;
 @Table(name = "testimony")
 public class Testimony {
     @Id
-    @Column(name = "testimonyId")
+    @Column(name = "testimony_id")
     private String testimonyId;
-    private String content;
-    private LocalDate date;
 
     @ManyToOne
-    @JoinColumn(name = "memberId")
+    @JoinColumn(name = "member_id")
     private Member member;
+
+    private String content;
+    private LocalDate date;
 
     protected Testimony(){}
 
     public Testimony(Builder builder){
         this.testimonyId = builder.testimonyId;
+        this.member = builder.member;
         this.content = builder.content;
         this.date = builder.date;
     }
 
     public String getTestimonyId(){ return testimonyId;}
+    public Member getMember(){ return member;}
     public String getContent(){ return content;}
     public LocalDate getDate(){ return date;}
+
 
     public String toString(){
         return "Testimony{ " + "\n" +
                 "Testimony Id: " + testimonyId + "\n" +
+                "Member: " + member + "\n" +
                 "Content: " + content + "\n" +
                 "Date: " + date + "}";
     }
 
     public static class Builder{
         private String testimonyId;
+        private Member member;
         private String content;
         private LocalDate date;
 
         public Builder copy(Testimony testimony){
             this.testimonyId = testimony.testimonyId;
+            this.member = testimony.member;
             this.content = testimony.content;
             this.date = testimony.date;
             return this;
@@ -50,6 +57,10 @@ public class Testimony {
 
         public Builder setTestimonyId(String testimonyId){
             this.testimonyId = testimonyId;
+            return this;
+        }
+        public Builder setMember(Member member){
+            this.member = member;
             return this;
         }
         public Builder setContent(String content){

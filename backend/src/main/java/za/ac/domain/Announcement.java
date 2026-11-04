@@ -18,7 +18,7 @@ public class Announcement {
     private LocalDate date;
 
     @ManyToOne
-    @JoinColumn(name = "churchSiteId")
+    @JoinColumn(name = "churchSite_id")
     private ChurchSite churchSite;
 
     @Column(name = "church_site_id", insertable = false, updatable = false)

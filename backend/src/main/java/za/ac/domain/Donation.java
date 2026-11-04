@@ -9,8 +9,9 @@ import java.util.Objects;
 @Table(name = "donations")
 public class Donation {
     @Id
-    @Column(name = "donationId")
+    @Column(name = "donation_id")
     private int donation_id;
+
     private double amount;
     private LocalDate donation_date;
     private String donation_type;
@@ -18,7 +19,7 @@ public class Donation {
     private String recipient_organization;
 
     @ManyToOne
-    @JoinColumn(name = "memberId")
+    @JoinColumn(name = "member_id")
     private Member member;
 
     private Donation(Builder builder) {
@@ -28,6 +29,7 @@ public class Donation {
         this.donation_type = builder.donation_type;
         this.donor_name = builder.donor_name;
         this.recipient_organization = builder.recipient_organization;
+        this.member = builder.member;
     }
 
     protected Donation() {
@@ -56,6 +58,8 @@ public class Donation {
     public String getRecipient_organization() {
         return recipient_organization;
     }
+
+    public Member getMember(){ return member;}
 
     @Override
     public boolean equals(Object o) {
@@ -97,6 +101,7 @@ public class Donation {
         private String donation_type;
         private String donor_name;
         private String recipient_organization;
+        private Member member;
 
         public Builder() {
         }
@@ -128,6 +133,11 @@ public class Donation {
 
         public Builder setRecipient_organization(String recipient_organization) {
             this.recipient_organization = recipient_organization;
+            return this;
+        }
+
+        public Builder setMember(Member member){
+            this.member = member;
             return this;
         }
 

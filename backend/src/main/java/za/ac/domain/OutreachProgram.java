@@ -8,20 +8,20 @@ import java.util.List;
 @Table(name="outreachProgram")
 public class OutreachProgram {
     @Id
-    @Column(name = "outreachProgramId")
+    @Column(name = "outreach_program_id")
     private String programId;
     private String programName;
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "leaderId")
+    @JoinColumn(name = "leader_id")
     private Leader leader;
 
     @ManyToMany
     @JoinTable(
             name = "member_outreach_program",
-            joinColumns = @JoinColumn(name = "programId"),
-            inverseJoinColumns = @JoinColumn(name = "memberId")
+            joinColumns = @JoinColumn(name = "program_id"),
+            inverseJoinColumns = @JoinColumn(name = "member_id")
     )
     private List<Member> members;
 
@@ -48,11 +48,15 @@ public class OutreachProgram {
         private String programId;
         private String programName;
         private String description;
+        private Leader leader;
+        private List<Member> members;
 
         public Builder copy(OutreachProgram outreachProgram){
             this.programId = outreachProgram.programId;
             this.programName = outreachProgram.programName;
             this.description = outreachProgram.description;
+            this.leader = outreachProgram.leader;
+            this.members = outreachProgram.members;
             return this;
         }
 
@@ -66,6 +70,14 @@ public class OutreachProgram {
         }
         public Builder setDescription(String description){
             this.description = description;
+            return this;
+        }
+        public Builder setLeader(Leader leader){
+            this.leader = leader;
+            return this;
+        }
+        public Builder setMembers(List<Member> members){
+            this.members = members;
             return this;
         }
 

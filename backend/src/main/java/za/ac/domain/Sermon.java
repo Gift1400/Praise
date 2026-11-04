@@ -10,13 +10,15 @@ public class Sermon {
     @Id
     @Column(name = "sermonId")
     private String sermonId;
+
+    @ManyToOne
+    @JoinColumn(name = "leader_id")
+    private Leader leader;
+
     private String title;
     private String description;
     private LocalDate date;
 
-    @ManyToOne
-    @JoinColumn(name = "leaderId")
-    private Leader leader;
 
     protected Sermon(){}
 
@@ -25,19 +27,23 @@ public class Sermon {
         this.title = builder.title;
         this.description = builder.description;
         this.date = builder.date;
+        this.leader = builder.leader;
     }
 
     public String getSermonId(){ return sermonId;}
     public String getTitle(){ return title;}
     public String getDescription(){ return description;}
     public LocalDate getDate(){ return date;}
+    public Leader getLeader(){ return leader;}
 
     public String toString(){
         return "Sermon{ " + "\n" +
                 "Sermon Id: " + sermonId + "\n" +
                 "Title: " + title + "\n" +
                 "Description: " + description + "\n" +
-                "Date: " + date + "}";
+                "Date: " + date +
+                "Leader: " + leader + "\n" +
+                "}";
     }
 
     public static class Builder{
@@ -45,17 +51,23 @@ public class Sermon {
         private String title;
         private String description;
         private LocalDate date;
+        private Leader leader;
 
         public Builder copy(Sermon sermon) {
             this.sermonId = sermon.sermonId;
             this.title = sermon.title;
             this.description = sermon.description;
             this.date = sermon.date;
+            this.leader = sermon.leader;
             return this;
         }
 
         public Builder setSermonId(String sermonId){
             this.sermonId = sermonId;
+            return this;
+        }
+        public Builder setLeader(Leader leader){
+            this.leader = leader;
             return this;
         }
         public Builder setTitle(String title){
