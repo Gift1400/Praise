@@ -7,7 +7,7 @@ import za.ac.domain.Enums.LifeSituation;
 @Table(name = "bibleVerse")
 public class BibleVerse {
     @Id
-    @Column(name = "bibleVerseId")
+    @Column(name = "bible_verse_id")
     private String verseId;
     private String text;
     private String book;

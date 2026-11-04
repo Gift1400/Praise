@@ -6,14 +6,14 @@ import jakarta.persistence.*;
 @Table(name = "leader")
 public class Leader {
     @Id
-    @Column(name = "leaderId")
+    @Column(name = "leader_id")
     private String leaderId;
     private String name;
     private String role;
     private String bio;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "contactDetailsId")
+    @JoinColumn(name = "contact_details_id")
     private ContactDetails contactDetails;
 
     protected Leader(){

@@ -5,18 +5,19 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "attendance")
 public class Attendance {
     @Id
-    @Column(name = "attendanceId")
+    @Column(name = "attendance_id")
     private String attendanceId;
 
     private LocalDate date;
-    @ManyToOne (fetch = FetchType.LAZY)
-    @JoinColumn(name = "memberId")
+    @ManyToOne (fetch = FetchType.EAGER)
+    @JoinColumn(name = "member_id")
     private Member member;
 
     @ManyToOne
-    @JoinColumn(name = "eventId")
+    @JoinColumn(name = "event_id")
     private Event event;
 
     protected Attendance(){};
@@ -25,28 +26,33 @@ public class Attendance {
         this.attendanceId = builder.attendanceId;
         this.date = builder.date;
         this.member = builder.member;
+        this.event = builder.event;
     }
 
     public String getAttendanceId(){ return attendanceId;}
     public LocalDate getDate(){ return date;}
     public Member getMember() { return member;}
+    public Event getEvent(){ return event;}
 
     public String toString(){
         return "Attendance{ " + "\n" +
                 "Attendance Id: " + attendanceId + "\n" +
                 "Date: " + date + "\n" +
-                "Member: " + member + "}";
+                "Member: " + member + "\n"+
+                "Event: " + event + "}";
     }
 
     public static class Builder{
         private String attendanceId;
         private LocalDate date;
         private Member member;
+        private Event event;
 
         public Builder copy(Attendance attendance){
             this.attendanceId = attendance.attendanceId;
             this.date = attendance.date;
             this.member = attendance.member;
+            this.event = attendance.event;
             return this;
         }
 
@@ -60,6 +66,11 @@ public class Attendance {
         }
         public Builder setMember(Member member){
             this.member = member;
+            return this;
+        }
+
+        public Builder setEvent(Event event){
+            this.event = event;
             return this;
         }
 

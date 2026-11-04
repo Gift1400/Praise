@@ -33,6 +33,7 @@ public class Event {
         this.time = builder.time;
         this.location = builder.location;
         this.expectedAttendees = builder.expectedAttendees;
+        this.churchSite = builder.churchSite;
     }
 
     public String getEventId() { return eventId; }
@@ -42,6 +43,8 @@ public class Event {
     public String getTime()  { return time; }
     public String getLocation() { return location; }
     public int getExpectedAttendees() { return expectedAttendees; }
+    public ChurchSite getChurchSite(){ return churchSite;}
+
 
     @Override
     public String toString() {
@@ -52,7 +55,8 @@ public class Event {
                 ", date=" + date +
                 ", time=" + time  + '\'' +
                 ", location=" + location  + '\'' +
-                ", expectedAttendees=" + expectedAttendees +
+                ", expectedAttendees=" + expectedAttendees + '\'' +
+                ", churchSite=" + churchSite +
                 '}';
     }
 
@@ -65,39 +69,45 @@ public class Event {
         private String time;
         private String location;
         private int expectedAttendees;
+        private ChurchSite churchSite;
 
-        public Builder eventId(String eventId) {
+        public Builder setEventId(String eventId) {
             this.eventId = eventId;
             return this;
         }
 
-        public Builder title(String title) {
+        public Builder setTitle(String title) {
             this.title = title;
             return this;
         }
 
-        public Builder description(String description) {
+        public Builder setDescription(String description) {
             this.description = description;
             return this;
         }
 
-        public Builder date(LocalDate date) {
+        public Builder setDate(LocalDate date) {
             this.date = date;
             return this;
         }
 
-        public Builder time(String time) {
+        public Builder setTime(String time) {
             this.time = time;
             return this;
         }
 
-        public Builder location(String location) {
+        public Builder setLocation(String location) {
             this.location = location;
             return this;
         }
 
-        public Builder expectedAttendees(int expectedAttendees) {
+        public Builder setExpectedAttendees(int expectedAttendees) {
             this.expectedAttendees = expectedAttendees;
+            return this;
+        }
+
+        public Builder setChurchSite(ChurchSite churchSite){
+            this.churchSite = churchSite;
             return this;
         }
 

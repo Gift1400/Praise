@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface IMemberRepository extends JpaRepository<Member, String> {
-
+    List<Member> getAll();
 }
