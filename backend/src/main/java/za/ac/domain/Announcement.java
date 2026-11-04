@@ -21,6 +21,9 @@ public class Announcement {
     @JoinColumn(name = "churchSiteId")
     private ChurchSite churchSite;
 
+    @Column(name = "church_site_id", insertable = false, updatable = false)
+    private String churchSiteId;
+
     @Enumerated(EnumType.STRING)
     private AnnouncementType type;
 
