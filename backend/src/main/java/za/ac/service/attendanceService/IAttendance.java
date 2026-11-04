@@ -11,6 +11,4 @@ public interface IAttendance extends IService<Attendance, String> {
     List<Attendance> getAll();
     List<Attendance> getByMemberId(String memberId);
 
-    @Query("SELECT a FROM Attendance a WHERE a.event.eventId = :eventId")
-    List<Attendance> getByEventId(@Param("eventId") String eventId);
 }

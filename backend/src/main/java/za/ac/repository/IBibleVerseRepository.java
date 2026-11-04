@@ -8,5 +8,5 @@ import java.util.*;
 
 @Repository
 public interface IBibleVerseRepository extends JpaRepository<BibleVerse, String> {
-    List<BibleVerse> getVerseByLiseSituation(LifeSituation situation);
+    List<BibleVerse> getVerseByLifeSituation(LifeSituation situation);
 }

@@ -1,5 +1,6 @@
 package za.ac.service.bibleVerseService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.domain.BibleVerse;
 import za.ac.domain.Enums.LifeSituation;
@@ -13,7 +14,7 @@ public class BibleVerseServiceImpl implements IBibleVerse{
 
     private final IBibleVerseRepository repository;
 
-
+    @Autowired
     public BibleVerseServiceImpl(IBibleVerseRepository repository) {
         this.repository = repository;
     }
@@ -52,7 +53,7 @@ public class BibleVerseServiceImpl implements IBibleVerse{
         if(situation == null){
             return Collections.emptyList();
         }
-        return repository.getVerseBySituation(situation);
+        return repository.getVerseByLifeSituation(situation);
     }
 
 }
