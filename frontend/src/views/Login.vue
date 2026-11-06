@@ -248,7 +248,7 @@ const forgotPassword = () => {
 </script>
 
 <style src="../styles/login.css"></style>
-<style src="../styles/user-type.css"></style>
+<style src="../styles/user-types.css"></style>
 
 <style scoped>
 .error-message {
