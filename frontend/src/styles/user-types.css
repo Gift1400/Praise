@@ -1,0 +1,93 @@
+.user-type-section {
+  margin-bottom: 24px;
+}
+
+.user-type-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3d372f;
+  margin-bottom: 8px;
+}
+
+.user-type-toggle {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  background: #efe9de;
+  border-radius: 12px;
+  border: 1px solid #e2dacd;
+}
+
+.user-type-toggle .type-option {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  margin: 0;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #6b5a40;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.user-type-toggle .type-option svg {
+  width: 17px;
+  height: 17px;
+  opacity: 0.8;
+}
+
+.user-type-toggle .type-option:hover:not(:disabled) {
+  background: rgba(128, 99, 62, 0.12);
+  color: #4a3a22;
+}
+
+.user-type-toggle .type-option.active {
+  background: #80633e;
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(128, 99, 62, 0.3);
+}
+
+.user-type-toggle .type-option.active svg {
+  opacity: 1;
+}
+
+.leader-code-box {
+  background: #faf6f0;
+  border: 1px dashed #c9b08f;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.leader-code-box .form-group {
+  margin-bottom: 6px;
+}
+
+.leader-code-hint {
+  font-size: 12px;
+  color: #7b6f5d;
+  margin: 4px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
