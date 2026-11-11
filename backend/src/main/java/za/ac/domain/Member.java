@@ -11,7 +11,8 @@ public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
-    private String memberId;
+    private Long memberId;
+
     private String userName;
 
     @OneToOne (fetch = FetchType.LAZY)
@@ -30,7 +31,7 @@ public class Member {
         this.donations = builder.donations;
     }
 
-    public String getMemberId(){
+    public Long getMemberId(){
         return memberId;
     }
 
@@ -52,12 +53,12 @@ public class Member {
     }
 
     public static class Builder{
-        private String memberId;
+        private Long memberId;
         private String userName;
         private ContactDetails contactDetails;
         private List<Donation> donations;
 
-        public Builder setMemberId(String memberId){
+        public Builder setMemberId(Long memberId){
             this.memberId = memberId;
             return this;
         }

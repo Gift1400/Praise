@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="outreachProgram")
+@Table(name="outreach_program")
 public class OutreachProgram {
     @Id
     @Column(name = "outreach_program_id")

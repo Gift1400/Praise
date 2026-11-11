@@ -5,7 +5,7 @@ import java.util.Objects;
 import za.ac.domain.Enums.Role;
 
 @Entity
-@Table(name = "users")
+@Table(name = "app_users")
 public class AppUser {
     @Id
     @Column(name = "userId")

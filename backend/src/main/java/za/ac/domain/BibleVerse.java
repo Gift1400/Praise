@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import za.ac.domain.Enums.LifeSituation;
 
 @Entity
-@Table(name = "bibleVerse")
+@Table(name = "bible_verse")
 public class BibleVerse {
     @Id
     @Column(name = "bible_verse_id")

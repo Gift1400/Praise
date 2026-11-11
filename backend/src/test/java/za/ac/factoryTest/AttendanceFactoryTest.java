@@ -30,7 +30,7 @@ class AttendanceFactoryTest {
         contact = ContactDetailsFactory.createContactDetails("C23T",
                 "thabomakhubu@gmail.com", "0738872245", "", "3923");
         date = LocalDate.of(2026, 8, 15);
-        member = MemberFactory.createMember("23T", "Thabo1200", contact, donations);
+        member = MemberFactory.createMember(4L, "Thabo1200", contact, donations);
         attendance = AttendanceFactory.createAttendance("14B", date, member);
     }
 }

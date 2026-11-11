@@ -12,6 +12,13 @@ public class Helper {
             return false;
         }
 
+    public static boolean isNullOrEmptyLong(Long str){
+        if((str == null)){
+            return true ;
+        }
+        return false;
+    }
+
     private static final String numberValidator = "^\\(?\\d{3}\\)?[-\\s.]?\\d{3}[-\\s.]?\\d{4}$";
 
         public static  boolean isValidNumber(String value){

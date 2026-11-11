@@ -8,10 +8,10 @@ import za.ac.util.Helper;
 import java.util.List;
 
 public class MemberFactory {
-    public static Member createMember(String memberId, String userName,
+    public static Member createMember(Long memberId, String userName,
                                       ContactDetails contact, List<Donation> donations){
 
-        if(Helper.isNullOrEmpty(memberId)
+        if(Helper.isNullOrEmptyLong(memberId)
                 || Helper.isNullOrEmpty(userName)){
             return null;
         }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "prayerRequest")
+@Table(name = "prayer_request")
 public class PrayerRequest {
     @Id
     @Column(name = "prayer_request_id")
