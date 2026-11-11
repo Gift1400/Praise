@@ -2,6 +2,7 @@ package za.ac.domain;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "contact_details")
 public class ContactDetails {
     @Id
     @Column(name = "contact_details_id")
