@@ -1,6 +1,6 @@
 package za.ac.domain.Enums;
 
-public enum Roles {
+public enum Role {
 
     MEMBER,
     LEADER,

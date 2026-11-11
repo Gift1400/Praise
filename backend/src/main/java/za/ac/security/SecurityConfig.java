@@ -9,6 +9,7 @@ import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -18,19 +19,19 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import za.ac.service.userService.UserDetailsServiceImpl;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Configuration
+@EnableWebSecurity
 public class SecurityConfig {
 
     private final JwtAuthFilter jwtAuthFilter;
-    private final UserDetailsServiceImpl userDetailsService;
+    private final UserDetailsService userDetailsService;
 
     @Autowired
-    public SecurityConfig(JwtAuthFilter jwtAuthFilter, UserDetailsServiceImpl userDetailsService) {
+    public SecurityConfig(JwtAuthFilter jwtAuthFilter, UserDetailsService userDetailsService) {
         this.jwtAuthFilter = jwtAuthFilter;
         this.userDetailsService = userDetailsService;
     }
@@ -48,22 +49,41 @@ public class SecurityConfig {
                                 "/api/announcements/**",
                                 "/api/sermon/**",
                                 "/api/bibleVerse/**",
-                                "/api/churchSite/**"
+                                "/api/churchSite/**",
+                                "/api/prayerRequest/**",
+                                "/api/testimony/**",
+                                "/api/outreachProgram/**",
+                                "/api/leader/**",
+                                "/api/rsvp/getByEvent/**"
+                        ).permitAll()
+                        .requestMatchers(HttpMethod.POST,
+                                "/api/prayerRequest/create",
+                                "/api/testimony/create",
+                                "/api/donations/create",
+                                "/api/rsvp/create"
                         ).permitAll()
                         .requestMatchers(HttpMethod.POST,
                                 "/api/events/**",
                                 "/api/announcements/**",
-                                "/api/sermon/**"
+                                "/api/sermon/**",
+                                "/api/outreachProgram/**",
+                                "/api/bibleVerse/**"
                         ).hasAnyRole("LEADER", "ADMIN")
                         .requestMatchers(HttpMethod.PUT,
                                 "/api/events/**",
                                 "/api/announcements/**",
-                                "/api/sermon/**"
+                                "/api/sermon/**",
+                                "/api/outreachProgram/**",
+                                "/api/bibleVerse/**"
                         ).hasAnyRole("LEADER", "ADMIN")
                         .requestMatchers(HttpMethod.DELETE,
                                 "/api/events/**",
                                 "/api/announcements/**",
-                                "/api/sermon/**"
+                                "/api/sermon/**",
+                                "/api/outreachProgram/**",
+                                "/api/bibleVerse/**",
+                                "/api/prayerRequest/**",
+                                "/api/testimony/**"
                         ).hasAnyRole("LEADER", "ADMIN")
                         .requestMatchers("/api/member/create", "/api/member/getAll").hasRole("ADMIN")
                         .requestMatchers("/api/donations/total", "/api/donations/getAll").hasAnyRole("LEADER", "ADMIN")
@@ -98,8 +118,7 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of("http://localhost:5173"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
-        configuration.setAllowedHeaders(List.of("*"));
-        configuration.setExposedHeaders(List.of("Authorization"));
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept"));
         configuration.setAllowCredentials(true);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);

@@ -23,13 +23,13 @@ public class EventFactory {
             return null;
         }
         return new Event.Builder()
-                .eventId(eventId)
-                .title(title)
-                .description(description)
-                .date(date)
-                .time(time)
-                .location(location)
-                .expectedAttendees(expectedAttendees)
+                .setEventId(eventId)
+                .setTitle(title)
+                .setDescription(description)
+                .setDate(date)
+                .setTime(time)
+                .setLocation(location)
+                .setExpectedAttendees(expectedAttendees)
                 .build();
     }
 }

@@ -52,4 +52,12 @@ public class AttendanceServiceImpl implements IAttendance{
         return repository.getByMemberId(memberId);
     }
 
+    @Override
+    public List<Attendance> getByEventId(String eventId) {
+        if (eventId == null) {
+            return Collections.emptyList();
+        }
+        return repository.getByEventId(eventId);
+    }
+
 }

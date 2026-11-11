@@ -1,19 +1,18 @@
 package za.ac.factory;
 
-import za.ac.domain.User;
-import za.ac.domain.Enums.Roles;
+import za.ac.domain.AppUser;
+import za.ac.domain.Enums.Role;
 import za.ac.util.Helper;
 
-import java.util.UUID;
 
-public class UserFactory {
+public class AppUserFactory {
 
-    public static User createAppUser(UUID userId, String email, String password, Roles role, String firstName, String lastName) {
+    public static AppUser createAppUser(String userId, String email, String password, Role role, String firstName, String lastName) {
         if (Helper.isNullOrEmpty(email) || Helper.isNullOrEmpty(password) || role == null) {
             return null;
         }
 
-        return new User.Builder()
+        return new AppUser.Builder()
                 .setUserId(userId)
                 .setEmail(email)
                 .setPassword(password)

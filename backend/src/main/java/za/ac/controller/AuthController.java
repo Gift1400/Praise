@@ -9,19 +9,20 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Value;
-import za.ac.domain.User;
-import za.ac.domain.Enums.Roles;
-import za.ac.repository.IUserRepository;
+import za.ac.domain.AppUser;
+import za.ac.domain.Enums.Role;
+import za.ac.repository.IAppUserRepository;
 import za.ac.util.JwtUtil;
 import za.ac.util.Helper;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("api/auth")
 public class AuthController {
 
-    private final IUserRepository userRepository;
+    private final IAppUserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
@@ -30,7 +31,7 @@ public class AuthController {
 
     @Autowired
     public AuthController(
-            IUserRepository userRepository,
+            IAppUserRepository userRepository,
             PasswordEncoder passwordEncoder,
             AuthenticationManager authenticationManager,
             JwtUtil jwtUtil
@@ -62,17 +63,18 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
         }
 
-        Roles role = Roles.MEMBER;
+        Role role = Role.MEMBER;
         if ("LEADER".equalsIgnoreCase(userType)) {
             if (Helper.isNullOrEmpty(leaderSignupCode) || !leaderSignupCode.equals(accessCode)) {
                 Map<String, Object> error = new HashMap<>();
                 error.put("error", "Invalid leader access code");
                 return ResponseEntity.status(HttpStatus.FORBIDDEN).body(error);
             }
-            role = Roles.LEADER;
+            role = Role.LEADER;
         }
 
-        User user = new User.Builder()
+        AppUser user = new AppUser.Builder()
+                .setUserId(UUID.randomUUID().toString())
                 .setEmail(email)
                 .setPassword(passwordEncoder.encode(password))
                 .setRole(role)
@@ -80,7 +82,7 @@ public class AuthController {
                 .setLastName(lastName)
                 .build();
 
-        User savedUser = userRepository.save(user);
+        AppUser savedUser = userRepository.save(user);
 
         String token = jwtUtil.generateToken(savedUser.getEmail(), savedUser.getRole().name());
 
@@ -116,10 +118,10 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
         }
 
-         User user = userRepository.findByEmail(email)
+        AppUser user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        if (!Helper.isNullOrEmpty(userType) && user.getRole() != Roles.ADMIN
+        if (!Helper.isNullOrEmpty(userType) && user.getRole() != Role.ADMIN
                 && !user.getRole().name().equalsIgnoreCase(userType)) {
             Map<String, Object> error = new HashMap<>();
             error.put("error", "This account is registered as a " + user.getRole().name().toLowerCase()

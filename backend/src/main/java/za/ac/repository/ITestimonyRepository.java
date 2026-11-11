@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ITestimonyRepository extends JpaRepository<Testimony, String> {
-    List<Testimony> getAll();
+
 }

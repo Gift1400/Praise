@@ -14,7 +14,7 @@ public class PrayerRequest {
     private LocalDate date;
 
     @ManyToOne
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "member_id", referencedColumnName = "member_id")
     private Member member;
 
     protected PrayerRequest(){}

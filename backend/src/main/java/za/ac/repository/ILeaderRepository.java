@@ -8,5 +8,4 @@ import java.util.List;
 
 @Repository
 public interface ILeaderRepository extends JpaRepository<Leader, String> {
-    List<Leader> getAll();
 }

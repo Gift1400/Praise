@@ -10,5 +10,6 @@ import java.util.*;
 public interface IAttendance extends IService<Attendance, String> {
     List<Attendance> getAll();
     List<Attendance> getByMemberId(String memberId);
+    List<Attendance> getByEventId(String eventId);
 
 }

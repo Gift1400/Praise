@@ -2,16 +2,14 @@ package za.ac.domain;
 
 import jakarta.persistence.*;
 import java.util.Objects;
-import za.ac.domain.Enums.Roles;
-import java.util.*;
+import za.ac.domain.Enums.Role;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class AppUser {
     @Id
-    @GeneratedValue(strategy= GenerationType.UUID)
-    @Column(name = "user_id")
-    private UUID userId;
+    @Column(name = "userId")
+    private String userId;
 
     @Column(unique = true, nullable = false)
     private String email;
@@ -21,14 +19,14 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Roles role;
+    private Role role;
 
     private String firstName;
     private String lastName;
 
-    protected User() {}
+    protected AppUser() {}
 
-    private User(Builder builder) {
+    private AppUser(Builder builder) {
         this.userId = builder.userId;
         this.email = builder.email;
         this.password = builder.password;
@@ -37,7 +35,7 @@ public class User {
         this.lastName = builder.lastName;
     }
 
-    public UUID getUserId() {
+    public String getUserId() {
         return userId;
     }
 
@@ -49,7 +47,7 @@ public class User {
         return password;
     }
 
-    public Roles getRole() {
+    public Role getRole() {
         return role;
     }
 
@@ -65,7 +63,7 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User appUser = (User) o;
+        AppUser appUser = (AppUser) o;
         return Objects.equals(userId, appUser.userId) &&
                 Objects.equals(email, appUser.email);
     }
@@ -87,14 +85,14 @@ public class User {
     }
 
     public static class Builder {
-        private UUID userId;
+        private String userId;
         private String email;
         private String password;
-        private Roles role;
+        private Role role;
         private String firstName;
         private String lastName;
 
-        public Builder setUserId(UUID userId) {
+        public Builder setUserId(String userId) {
             this.userId = userId;
             return this;
         }
@@ -109,7 +107,7 @@ public class User {
             return this;
         }
 
-        public Builder setRole(Roles role) {
+        public Builder setRole(Role role) {
             this.role = role;
             return this;
         }
@@ -124,7 +122,7 @@ public class User {
             return this;
         }
 
-        public Builder copy(User user) {
+        public Builder copy(AppUser user) {
             this.userId = user.userId;
             this.email = user.email;
             this.password = user.password;
@@ -134,9 +132,8 @@ public class User {
             return this;
         }
 
-        public User build() {
-            return new User(this);
+        public AppUser build() {
+            return new AppUser(this);
         }
     }
 }
-

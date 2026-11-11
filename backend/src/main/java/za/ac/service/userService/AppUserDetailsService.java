@@ -7,29 +7,30 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import za.ac.repository.IUserRepository;
+import za.ac.domain.AppUser;
+import za.ac.repository.IAppUserRepository;
+
 import java.util.Collections;
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService{
-    private final IUserRepository userRepository;
+public class AppUserDetailsService implements UserDetailsService {
+
+    private final IAppUserRepository userRepository;
 
     @Autowired
-    public UserDetailsServiceImpl(IUserRepository userRepository) {
+    public AppUserDetailsService(IAppUserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = userRepository.findByEmail(email)
+        AppUser appUser = userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + email));
 
         return new User(
-                user.getEmail(),
-                user.getPassword(),
-                Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()))
+                appUser.getEmail(),
+                appUser.getPassword(),
+                Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + appUser.getRole().name()))
         );
     }
 }
-
-
