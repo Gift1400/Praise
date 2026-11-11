@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 @Entity
 public class ContactDetails {
     @Id
-    @Column(name = "contactDetailsId")
+    @Column(name = "contact_details_id")
     private String contactDetailsId;
     private String email;
     private String phone;

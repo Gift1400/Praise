@@ -8,7 +8,7 @@ import za.ac.domain.Enums.Role;
 @Table(name = "app_users")
 public class AppUser {
     @Id
-    @Column(name = "userId")
+    @Column(name = "user_id")
     private String userId;
 
     @Column(unique = true, nullable = false)

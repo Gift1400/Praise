@@ -11,14 +11,14 @@ import java.time.LocalDate;
 public class Announcement {
 
     @Id
-    @Column(name = "announcementId")
+    @Column(name = "announcement_id")
     private String announcementId;
     private String title;
     private String message;
     private LocalDate date;
 
     @ManyToOne
-    @JoinColumn(name = "churchSite_id")
+    @JoinColumn(name = "church_site_id")
     private ChurchSite churchSite;
 
     @Column(name = "church_site_id", insertable = false, updatable = false)
