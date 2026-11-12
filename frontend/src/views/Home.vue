@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <!-- Hero Section (Preserved as-is) -->
+    <!-- Hero Section-->
     <section class="hero-section">
       <section class="hero-overlay">
         <h2 id="hero-title">Welcome Home</h2>
@@ -11,34 +11,6 @@
         </article>
       </section>
     </section>
-
-    <!-- 1. Welcome Section -->
-    <!-- <section class="welcome-section">
-      <div class="section-container welcome-container">
-        <div class="welcome-text-col">
-          <span class="sub-heading">WELCOME TO PRAISE</span>
-          <h2 class="section-title">About Our Church</h2>
-          <div class="gold-divider"></div>
-          <p class="welcome-desc">
-            Praise Church is a vibrant faith community dedicated to knowing Christ and making Him known.
-            We are committed to building authentic fellowship, growing in biblical truth, and serving our city with
-            compassion and joy.
-          </p>
-          <p class="welcome-desc secondary">
-            Whether you are exploring faith for the first time or looking for a church family to call home, our doors
-            and hearts are open to welcome you with grace.
-          </p>
-          <div class="welcome-action">
-            <router-link to="/about" class="btn-primary">Learn More</router-link>
-          </div>
-        </div>
-        <div class="welcome-image-col">
-          <div class="image-wrapper">
-            <img :src="gatheringImg" alt="Praise Church Gathering" class="welcome-img" />
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- 2. Upcoming Events Section -->
     <section class="events-section">

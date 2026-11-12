@@ -2,23 +2,31 @@
   <footer class="praise-footer">
     <div class="footer-container">
       <div class="footer-grid">
+        <!-- Brand Column -->
         <div class="footer-col brand-col">
           <h2 class="footer-logo">Pra✝se</h2>
           <p class="tagline">A community rooted in faith, love and praise.</p>
         </div>
 
+        <!-- Quick Links Column -->
         <div class="footer-col links-col">
           <h3 class="col-title">Quick Links</h3>
           <ul class="footer-links">
             <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/profile">My Profile</router-link></li>
             <li><router-link to="/sermons">Sermons</router-link></li>
             <li><router-link to="/events">Events</router-link></li>
             <li><router-link to="/announcements">Announcements</router-link></li>
-            <li><router-link to="/about">About</router-link></li>
+            <li><router-link to="/prayer">Prayer &amp; Testimonies</router-link></li>
+            <li><router-link to="/verses">Scripture Verses</router-link></li>
+            <li><router-link to="/outreach">Community Outreach</router-link></li>
+            <li><router-link to="/giving">Online Giving</router-link></li>
+            <li><router-link to="/about">About Us</router-link></li>
             <li><router-link to="/contacts">Contact</router-link></li>
           </ul>
         </div>
 
+        <!-- Service Times Column -->
         <div class="footer-col services-col">
           <h3 class="col-title">Service Times</h3>
           <ul class="service-times">
@@ -37,7 +45,8 @@
           </ul>
         </div>
 
-         <div class="footer-col contact-col">
+        <!-- Contact Column -->
+        <div class="footer-col contact-col">
           <h3 class="col-title">Contact Info</h3>
           <div class="contact-items">
             <div class="contact-item">
@@ -68,49 +77,9 @@
         </div>
       </div>
 
+      <!-- Bottom Bar -->
       <div class="footer-bottom">
         <p class="copyright">&copy; 2026 Praise Church. All rights reserved.</p>
-        <div class="social-links">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="Facebook"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-              alt="Facebook"
-              class="social-icon"
-            />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="Instagram"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-              alt="Instagram"
-              class="social-icon"
-            />
-          </a>
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="YouTube"
-          >
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
-              alt="YouTube"
-              class="social-icon"
-            />
-          </a>
-        </div>
       </div>
     </div>
   </footer>
@@ -260,6 +229,7 @@
   color: #b08d57;
 }
 
+/* Bottom Bar */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -268,6 +238,9 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   flex-wrap: wrap;
   gap: 1.5rem;
+  text-align:center;
+  align-items:center;
+  width:100%;
 }
 
 .copyright {
@@ -298,11 +271,6 @@
   transform: translateY(-2px);
 }
 
-.social-icon {
-  width: 18px;
-  height: 18px;
-  filter: brightness(0) invert(1);
-}
 
 /* Responsive */
 @media (max-width: 850px) {
