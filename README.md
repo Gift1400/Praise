@@ -31,6 +31,7 @@ A full-stack web application built to help churches manage their day-to-day oper
 
 ## Project Structure
 
+
 ```
 Praise/
 ├── backend/
@@ -38,22 +39,37 @@ Praise/
 │   │   ├── main/
 │   │   │   ├── java/
 │   │   │   │   ├── controller/       # REST API endpoints
-│   │   │   │   ├── domain/           # Entity classes
-│   │   │   │   ├── factory/          # Builder pattern factories
-│   │   │   │   ├── repository/       # JPA repositories
-│   │   │   │   └── util/             # Helper/utility classes
+│   │   │   │   ├── domain/           # Domain entities and models
+│   │   │   │   ├── factory/          # Object creation and builder pattern factories
+│   │   │   │   ├── repository/       # Data access and JPA repositories
+│   │   │   │   └── util/             # Utility classes and helper methods
 │   │   │   └── resources/
 │   │   │       └── application.properties
 │   │   └── test/
 │   │       └── java/
-│   │           ├── factoryTest/      # Unit tests
-│   │           ├── repositoryTest/   # Database operations
-│   │           ├── serviceTest/      # Business logic
-│   │           └── controllerTest/   # API endpoints
+│   │           ├── factoryTest/
+│   │           ├── repositoryTest/
+│   │           ├── serviceTest/
+│   │           └── controllerTest/
 │   └── pom.xml
-├── frontend/ #comming soon
+│
+├── frontend/
+│   ├── public/                       # Static assets
+│   ├── src/
+│   │   ├── assets/                   # Images, icons and styles
+│   │   ├── components/               # Reusable Vue components
+│   │   ├── views/                    # Application pages
+│   │   ├── router/                   # Frontend navigation
+│   │   ├── services/                 # API calls to the backend
+│   │   ├── stores/                   # Application state management (if used)
+│   │   ├── App.vue                   # Root Vue component
+│   │   └── main.js                   # Frontend entry point
+│   ├── index.html
+│   └── package.json                  # Frontend dependencies and scripts
+│
 └── README.md
 ```
+
 
 ## Domain Classes
 
@@ -78,8 +94,7 @@ Praise/
 ---
 
 ## UML Diagram
-
-<img width="1442" height="681" alt="Screenshot 2026-06-15 183355" src="https://github.com/user-attachments/assets/318f1f6b-a29b-4f67-a65f-4d69a086f086" />
+<img width="3989" height="1915" alt="Praise_UML" src="https://github.com/user-attachments/assets/9bcd1afa-f7c5-4154-a79e-cdfac3b22c98" />
 
 ---
 
